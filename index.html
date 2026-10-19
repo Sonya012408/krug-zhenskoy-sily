@@ -1,0 +1,1373 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Круг женской силы — справочник</title>
+<meta name="description" content="Все практики, правила, числа и архетипы из книги Ларисы Ренар «Круг женской силы» в одном справочнике.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Forum&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+/* Концепция: справочник при обруче. Девять камней — навигация и главная метафора.
+   Четыре больших камня = стихии на сторонах света, как в книге: север Воздух, восток Огонь, юг Вода, запад Земля. */
+:root {
+  --bg: #f3f0f4;
+  --bg-glass: rgba(243, 240, 244, 0.88);
+  --surface: #ffffff;
+  --surface-2: #ebe6ed;
+  --ink: #2a1824;
+  --muted: #65535f;
+  --line: #d9d0da;
+  --accent: #5a2a4c;
+  --accent-ink: #ffffff;
+  --accent-soft: #eadbe6;
+  --earth: #b98a1f;
+  --fire: #be2430;
+  --water: #2a8a68;
+  --air: #4f93cc;
+  --pearl-a: #ffffff;
+  --pearl-b: #3a3550;
+  --on-el: #ffffff;
+  --display: 'Forum', 'Georgia', 'Times New Roman', serif;
+  --sans: 'Golos Text', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #160e14;
+    --bg-glass: rgba(22, 14, 20, 0.88);
+    --surface: #211720;
+    --surface-2: #2b1f2a;
+    --ink: #f2eaf0;
+    --muted: #b5a3ae;
+    --line: #3b2c38;
+    --accent: #e3a9cb;
+    --accent-ink: #2a1824;
+    --accent-soft: #3a2336;
+    --earth: #e0b24a;
+    --fire: #f0646b;
+    --water: #52c79a;
+    --air: #86bdeb;
+    --pearl-a: #f7f3fb;
+    --pearl-b: #5a5578;
+    --on-el: #1a0f17;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #160e14;
+  --bg-glass: rgba(22, 14, 20, 0.88);
+  --surface: #211720;
+  --surface-2: #2b1f2a;
+  --ink: #f2eaf0;
+  --muted: #b5a3ae;
+  --line: #3b2c38;
+  --accent: #e3a9cb;
+  --accent-ink: #2a1824;
+  --accent-soft: #3a2336;
+  --earth: #e0b24a;
+  --fire: #f0646b;
+  --water: #52c79a;
+  --air: #86bdeb;
+  --pearl-a: #f7f3fb;
+  --pearl-b: #5a5578;
+  --on-el: #1a0f17;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 64px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.62 var(--sans);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.12; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.eyebrow { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* навигация */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  margin: 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--bg-glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-in { max-width: 1120px; margin: 0 auto; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.nav-in::-webkit-scrollbar { display: none; }
+.nav a { flex: none; text-decoration: none; font-size: 14.5px; padding: 15px 11px; color: var(--muted); border-bottom: 2px solid transparent; }
+.nav a:hover { color: var(--ink); }
+.nav a.on { color: var(--ink); border-bottom-color: var(--accent); }
+
+/* hero */
+.hero { padding-block: 56px 40px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 32px; align-items: center; }
+.hero h1 { font-size: clamp(46px, 8vw, 92px); letter-spacing: -0.01em; margin-top: 14px; }
+.hero .sub { margin-top: 18px; font-size: 20px; line-height: 1.45; color: var(--muted); max-width: 30em; }
+.hero .src { margin-top: 12px; font-size: 14px; color: var(--muted); }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 30px; }
+.stat b { display: block; font: 400 38px/1 var(--display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; color: var(--muted); }
+.hoop { width: 100%; max-width: 460px; justify-self: center; }
+.hoop svg { width: 100%; height: auto; display: block; overflow: visible; }
+.hoop text { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; fill: var(--muted); }
+
+/* секции */
+section { padding-block: 56px; border-top: 1px solid var(--line); }
+.head { display: grid; gap: 10px; margin-bottom: 30px; max-width: 46rem; }
+.head h2 { font-size: clamp(32px, 5vw, 48px); }
+.lead { color: var(--muted); font-size: 18px; }
+
+.ideas { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.idea { padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; min-width: 0; }
+.idea h3 { font-size: 22px; margin-bottom: 8px; }
+.idea p { color: var(--muted); font-size: 15.5px; }
+
+/* стихии */
+.els { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.el { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; min-width: 0; }
+.el-top { padding: 18px 20px 16px; color: var(--on-el); background: var(--c); }
+.el[data-k="earth"] { --c: var(--earth); } .el[data-k="fire"] { --c: var(--fire); }
+.el[data-k="water"] { --c: var(--water); } .el[data-k="air"] { --c: var(--air); }
+.el-top .eyebrow { color: inherit; opacity: 0.85; }
+.el-top h3 { font-size: 30px; margin-top: 4px; }
+.el-top .st { font-size: 15px; margin-top: 2px; }
+.el dl { margin: 0; padding: 6px 20px 18px; }
+.el dt { font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 14px; }
+.el dd { margin: 2px 0 0; font-size: 15px; }
+
+.table-wrap { overflow-x: auto; margin-top: 34px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 560px; }
+th, td { text-align: left; padding: 11px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; background: var(--surface-2); }
+tr:last-child td { border-bottom: 0; }
+td.n { font: 400 24px/1 var(--display); color: var(--accent); width: 48px; font-variant-numeric: tabular-nums; }
+.cap { font-size: 14px; color: var(--muted); margin-top: 10px; }
+
+/* путь */
+.path { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.stage { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 0 18px; padding-bottom: 26px; position: relative; }
+.stage::before { content: ''; position: absolute; left: 27px; top: 54px; bottom: 0; width: 1px; background: var(--line); }
+.stage:last-child::before { display: none; }
+.stage-n { width: 54px; height: 54px; border-radius: 50%; border: 1px solid var(--accent); display: grid; place-items: center; font: 400 24px/1 var(--display); color: var(--accent); background: var(--bg); position: relative; z-index: 1; font-variant-numeric: tabular-nums; }
+.stage h3 { font-size: 26px; }
+.stage .meta { margin: 4px 0 8px; font-size: 13.5px; color: var(--muted); }
+.stage p { max-width: 44rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.chip { font-size: 13px; line-height: 1.3; padding: 5px 11px; border-radius: 99px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); background: var(--surface); }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+
+/* практики */
+.tools { position: sticky; top: calc(48px + env(safe-area-inset-top, 0px)); z-index: 10; background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
+.search { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.search input { flex: 1 1 260px; min-width: 0; font: inherit; font-size: 16px; padding: 11px 14px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; }
+.search input::placeholder { color: var(--muted); }
+.btn { font: inherit; font-size: 14px; padding: 10px 14px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.filters button { font: inherit; font-size: 13.5px; padding: 6px 12px; border-radius: 99px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.filters button small { opacity: 0.7; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.count { font-size: 14px; color: var(--muted); }
+.list { display: grid; gap: 10px; margin-top: 20px; }
+.prac { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; min-width: 0; }
+.prac[open] { border-color: var(--accent); }
+.prac summary { list-style: none; cursor: pointer; padding: 18px 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 14px; }
+.prac summary::-webkit-details-marker { display: none; }
+.prac h3 { font-size: 24px; grid-column: 1; }
+.prac .chb { grid-column: 2; grid-row: 1; align-self: start; font-size: 13px; padding: 3px 10px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.prac .pm { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.prac .pg { grid-column: 1 / -1; margin-top: 6px; }
+.prac .tg { grid-column: 1 / -1; margin-top: 8px; font-size: 13.5px; color: var(--accent); }
+.prac .tg::before { content: 'Как делать ↓'; }
+.prac[open] .tg::before { content: 'Свернуть ↑'; }
+.pb { padding: 2px 20px 22px; display: grid; gap: 16px; }
+.pb ol { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+.pb li { counter-increment: s; padding-left: 38px; position: relative; }
+.pb li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--accent); color: var(--accent); font: 400 15px/24px var(--display); text-align: center; }
+.pb .tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+.pb .tbl table { min-width: 0; font-size: 14.5px; }
+.pb .tbl td:first-child { white-space: nowrap; color: var(--accent); }
+.pb .note { background: var(--surface-2); padding: 14px 16px; border-radius: 10px; font-size: 15px; }
+.pb .note b { display: block; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 4px; }
+.empty { padding: 40px 0; text-align: center; color: var(--muted); }
+
+/* мужчины */
+.arch { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.ar { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: grid; gap: 12px; min-width: 0; align-content: start; }
+.ar h3 { font-size: 30px; }
+.ar .els-l { font-size: 13.5px; color: var(--accent); }
+.ar h4 { font: 500 11.5px/1.3 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.ar p { font-size: 15.5px; }
+.ar .want { background: var(--accent-soft); padding: 14px 16px; border-radius: 10px; }
+.ar .want b { font: 400 21px/1.2 var(--display); display: block; color: var(--accent); }
+
+/* числа */
+.nums { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 28px; }
+.nm { display: grid; grid-template-columns: minmax(110px, 38%) minmax(0, 1fr) auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.nm b { font: 400 21px/1.2 var(--display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.nm span { font-size: 15px; }
+.nm i { font-style: normal; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+
+/* правила */
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.rl { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; min-width: 0; }
+.rl h3 { font-size: 28px; margin-bottom: 8px; }
+.rl ul { list-style: none; margin: 0; padding: 0; }
+.rl li { display: flex; justify-content: space-between; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+.rl li:last-child { border-bottom: 0; }
+.rl li i { font-style: normal; font-size: 12.5px; color: var(--muted); white-space: nowrap; padding-top: 3px; }
+
+/* главы */
+.part { margin-top: 30px; }
+.part h3 { font-size: 26px; margin-bottom: 4px; }
+.part .eyebrow { margin-bottom: 6px; display: block; }
+.chap { border-bottom: 1px solid var(--line); }
+.chap summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 14px; padding: 15px 0; align-items: baseline; }
+.chap summary::-webkit-details-marker { display: none; }
+.chap .cn { font: 400 28px/1 var(--display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.chap .ct { font-size: 17px; }
+.chap .cm { font-size: 13px; color: var(--muted); }
+.chap .cb { padding: 0 0 18px 66px; max-width: 46rem; }
+.chap .cb p { color: var(--muted); }
+
+/* словарь */
+.gl { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 32px; }
+.gl div { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.gl dt { font: 400 21px/1.2 var(--display); }
+.gl dd { margin: 4px 0 0; font-size: 15.5px; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); padding-block: 40px 56px; color: var(--muted); font-size: 14.5px; display: grid; gap: 8px; max-width: 46rem; }
+
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; padding-top: 36px; }
+  .hoop { max-width: 340px; order: -1; }
+  section { padding-block: 40px; }
+  .stage { grid-template-columns: 48px minmax(0, 1fr); gap: 0 12px; }
+  .stage-n { width: 44px; height: 44px; font-size: 20px; }
+  .stage::before { left: 22px; top: 46px; }
+  .chap summary { grid-template-columns: 40px minmax(0, 1fr); }
+  .chap .cm { grid-column: 2; }
+  .chap .cb { padding-left: 54px; }
+  .tools { position: static; }
+  .prac summary { padding: 16px; }
+  .pb { padding: 2px 16px 18px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .prac, .chip, .btn { transition: border-color 0.15s; }
+}
+
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Разделы"><div class="nav-in" id="nav"></div></nav>
+<div class="wrap">
+
+<header class="hero" id="top">
+  <div>
+    <p class="eyebrow">Справочник по книге · Лариса Ренар</p>
+    <h1>Круг женской силы</h1>
+    <p class="sub">Энергии стихий и тайны обольщения. Все практики, правила, числа и типы мужчин из книги в одном месте.</p>
+    <p class="src">Эксмо, 27-е издание, 2022 · 22 главы в 5 частях · пересказ полного текста</p>
+    <div class="stats" id="stats"></div>
+  </div>
+  <div class="hoop" aria-label="Обруч женской силы: четыре больших камня по сторонам света, четыре малых между ними, жемчужина в центре">
+    <svg viewBox="0 0 440 440" role="img" aria-hidden="true">
+      <defs>
+        <radialGradient id="pearl" cx="35%" cy="30%" r="75%">
+          <stop offset="0" style="stop-color: var(--pearl-a)"/>
+          <stop offset="1" style="stop-color: var(--pearl-b)"/>
+        </radialGradient>
+        <g id="gem">
+          <polygon points="0,-24 18,-9 18,9 0,24 -18,9 -18,-9" style="fill: var(--c)"/>
+          <polygon points="0,-24 18,-9 0,0 -18,-9" fill="#fff" opacity="0.3"/>
+          <path d="M-18,-9 L0,0 L18,-9 M0,0 L0,24 M-18,9 L0,0 L18,9" fill="none" stroke="#fff" stroke-opacity="0.4"/>
+        </g>
+      </defs>
+      <circle cx="220" cy="220" r="150" fill="none" style="stroke: var(--ink)" stroke-width="3"/>
+      <circle cx="220" cy="220" r="141" fill="none" style="stroke: var(--line)" stroke-width="1"/>
+      <circle cx="220" cy="220" r="159" fill="none" style="stroke: var(--line)" stroke-width="1" stroke-dasharray="2 7"/>
+      <g fill="none" style="stroke: var(--ink)" stroke-width="1.4" stroke-linecap="round">
+        <path d="M220,98 Q238,160 220,198"/>
+        <path d="M220,98 Q238,160 220,198" transform="rotate(90 220 220)"/>
+        <path d="M220,98 Q238,160 220,198" transform="rotate(180 220 220)"/>
+        <path d="M220,98 Q238,160 220,198" transform="rotate(270 220 220)"/>
+      </g>
+      <g style="fill: var(--surface); stroke: var(--ink)" stroke-width="1.5">
+        <circle cx="294" cy="146" r="9"/><circle cx="294" cy="294" r="9"/>
+        <circle cx="146" cy="294" r="9"/><circle cx="146" cy="146" r="9"/>
+      </g>
+      <use href="#gem" x="220" y="70" style="--c: var(--air)"/>
+      <use href="#gem" x="370" y="220" style="--c: var(--fire)"/>
+      <use href="#gem" x="220" y="370" style="--c: var(--water)"/>
+      <use href="#gem" x="70" y="220" style="--c: var(--earth)"/>
+      <circle cx="220" cy="220" r="20" fill="url(#pearl)" style="stroke: var(--ink)" stroke-width="1"/>
+      <text x="220" y="30" text-anchor="middle">Воздух · север</text>
+      <text x="220" y="424" text-anchor="middle">Вода · юг</text>
+      <text x="404" y="218" text-anchor="start">Огонь</text>
+      <text x="404" y="234" text-anchor="start">восток</text>
+      <text x="36" y="218" text-anchor="end">Земля</text>
+      <text x="36" y="234" text-anchor="end">запад</text>
+    </svg>
+  </div>
+</header>
+
+<section id="idea">
+  <div class="head"><p class="eyebrow">Суть</p><h2>Восемь идей, на которых стоит вся книга</h2>
+  <p class="lead">Книга написана как роман с двумя линиями, 1903 и 2003 годов. Практики и правила в ней идут внутри разговоров героинь с наставницами. Здесь они собраны отдельно.</p></div>
+  <div class="ideas" id="ideas"></div>
+</section>
+
+<section id="stihii">
+  <div class="head"><p class="eyebrow">Карта</p><h2>Четыре стихии, четыре состояния, четыре дара</h2>
+  <p class="lead">Стихии заданы сторонами света. Каждая даёт женщине своё состояние, свой центр на теле и свой дар жрицы. Мужчины разных типов ищут разные сочетания.</p></div>
+  <div class="els" id="els"></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Ур.</th><th>Мужчина</th><th>Женщина</th></tr></thead>
+    <tbody id="levels"></tbody>
+  </table></div>
+  <p class="cap">Семь уровней власти по главе 5. Числа поворотов воронки для каждого уровня есть в практиках.</p>
+</section>
+
+<section id="put">
+  <div class="head"><p class="eyebrow">Путь отношений</p><h2>От подготовки до решения, в порядке книги</h2>
+  <p class="lead">Порядок важен: по книге, если нарушить последовательность состояний, отношения быстро кончаются или тянутся ни к чему. Нажми на практику, чтобы открыть её описание.</p></div>
+  <ol class="path" id="path"></ol>
+</section>
+
+<section id="praktiki">
+  <div class="head"><p class="eyebrow">Каталог</p><h2>Все практики и приёмы</h2>
+  <p class="lead">Для чего нужна практика, как её делать по шагам, числа и заметки из книги. Ищи по слову: «обида», «каблук», «свеча», «подарок».</p></div>
+  <div class="tools">
+    <div class="search">
+      <input id="q" type="search" placeholder="Поиск по практикам" aria-label="Поиск по практикам" autocomplete="off">
+      <button class="btn" id="toggle" type="button">Раскрыть все</button>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Категории"></div>
+    <div class="count num" id="count" aria-live="polite"></div>
+  </div>
+  <div class="list" id="list"></div>
+</section>
+
+<section id="muzhchiny">
+  <div class="head"><p class="eyebrow">Мужчины</p><h2>Четыре архетипа и то, что каждый ищет</h2>
+  <p class="lead">Две ведущие стихии мужчины определяют его категорию. Мужчина ищет ту энергию, которая его дополняет. По книге, мужчина не меняется, поэтому его нужно принять; женщина может развить в себе нужные состояния.</p></div>
+  <div class="arch" id="arch"></div>
+</section>
+
+<section id="chisla">
+  <div class="head"><p class="eyebrow">Числа и сроки</p><h2>Всё, что в книге названо цифрой</h2></div>
+  <div class="nums" id="nums"></div>
+</section>
+
+<section id="pravila">
+  <div class="head"><p class="eyebrow">Правила</p><h2>Делай и не делай</h2>
+  <p class="lead">Короткие правила, которые повторяются в разных главах. Справа номера глав.</p></div>
+  <div class="rules" id="rules"></div>
+</section>
+
+<section id="glavy">
+  <div class="head"><p class="eyebrow">Главы</p><h2>Что в каждой из 22 глав</h2></div>
+  <div id="chapters"></div>
+</section>
+
+<section id="slovar">
+  <div class="head"><p class="eyebrow">Словарь</p><h2>Термины книги</h2></div>
+  <dl class="gl" id="gl"></dl>
+</section>
+
+<footer>
+  <p>Личный конспект-справочник по книге Ларисы Ренар «Круг женской силы. Энергии стихий и тайны обольщения» (Эксмо, 27-е издание, 2022). Составлен 19.10.2026 по полному тексту книги в Яндекс Книгах.</p>
+  <p>Практики пересказаны, а не процитированы; числа и последовательности даны как в книге. Это авторская система Ларисы Ренар и сюжетные эпизоды романа, а не медицинская или психологическая рекомендация.</p>
+  <p><a href="https://books.yandex.ru/books/OUOF4nr6" rel="noopener">Книга на Яндекс Книгах</a></p>
+</footer>
+</div>
+<script>
+// Практики и приёмы из книги. Поля: id, t — название, ch — глава, cat, type, goal, steps[], note, table[[a,b]]
+window.CATS = {
+  energy:    { name: 'Энергия',                 hint: 'накопить, раскрутить воронку, поднять уровень' },
+  release:   { name: 'Освобождение',            hint: 'связи, обиды, привязанность' },
+  elements:  { name: 'Стихии и состояния',      hint: 'любовница, королева, девочка, хозяйка' },
+  attract:   { name: 'Знакомство',              hint: 'взгляд, слово, касание, образ' },
+  relations: { name: 'Ход отношений',           hint: 'от свиданий до предложения' },
+  gifts:     { name: 'Подарки и изобилие',      hint: 'как получать и принимать' },
+  body:      { name: 'Тело',                    hint: 'мышцы, массаж, утро' }
+};
+
+window.PRACTICES = [
+{
+  id: 'svyazi', t: 'Освобождение от связей', ch: '2', cat: 'release', type: 'движение',
+  goal: 'Снять энергетическую связь с мужчиной, с которым была близость, и вернуть себе энергию. По книге, связь держится 7 лет, даже если мужчины нет в живых, он далеко или была одна ночь.',
+  steps: [
+    'Соедини большой палец (женская сексуальность) и указательный (власть). Это кольцо женской силы.',
+    'Опусти кольцо на низ живота, к матке, и поставь его «на 12 часов», как будто циферблат смотрит вниз.',
+    'Поверни голову влево (прошлое) и на вдохе представь мужчину.',
+    'Повернись вперёд (настоящее) и спиральными движениями к центру собирай нить против часовой стрелки: три круга.',
+    'Поверни голову вправо (будущее) и на выдохе выбрось связь.'
+  ],
+  note: 'Лучшее время: 19-й лунный день, но можно в любой момент, когда готова. Делается по каждому мужчине отдельно. В романе героини вспоминали всех мужчин за семь лет и убирали связи по одному.'
+},
+{
+  id: 'pereklyuch', t: 'Переключение связи', ch: '2', cat: 'release', type: 'приём',
+  goal: 'Не разорвать связь, а направить её на нужную задачу.',
+  steps: [
+    'Те же движения, что в «Освобождении от связей», но в правой руке большой палец соединяется не с указательным, а с другим.',
+    'Мизинец: финансовая поддержка мужчины.',
+    'Безымянный: замуж.',
+    'Средний: чтобы захотел так же, как в первый раз, и посмотрел новыми глазами.',
+    'Указательный: власть, связи и положение мужчины.'
+  ],
+  note: 'Энергию мужчине при этом больше не отдаёшь, но удерживаешь его рядом. Книга сравнивает это с дамой, у которой много маленьких собачек на поводках.'
+},
+{
+  id: 'lono', t: 'Лоно женской природы', ch: '3', cat: 'energy', type: 'медитация',
+  goal: 'Внутренним взором увидеть, есть ли у тебя энергия и сколько её; навести порядок внутри и наполнить матку.',
+  steps: [
+    'Закрой глаза, вдохни и на выдохе опусти внимание в матку. Тьма рассеивается: это лоно твоей женской природы.',
+    'Рассмотри деревья, цветы, запахи, звуки, пение птиц. Всё, что нарушает красоту (грязь, хлам, следы), убери.',
+    'Поднимись к белым облакам и посмотри на свой мир сверху. Можно что-то изменить или добавить.',
+    'Найди воду: ручей, море, водопад, подземный источник. Вода — женская энергия. Если воды нет, энергия исчерпана и её нужно искать: призвать дождь или копать.',
+    'Опустись на дно к раковине и открой её. Внутри жемчужина женской притягательности. Положи её в матку и почувствуй мерцание.',
+    'Всплыви к поверхности «рождённой заново, как Афродита из пены».'
+  ],
+  note: 'Цвет жемчужины подсказывает, какой камень нужен как девятый в обруче (у героини жемчужина чёрная). Практику повторяют несколько дней.'
+},
+{
+  id: 'voronka-nakop', t: 'Воронка накопления энергии', ch: '3', cat: 'energy', type: 'движение',
+  goal: 'Брать энергию у мира и наполнять ею матку.',
+  steps: [
+    'Встань, ступни параллельно, руки подними к небу.',
+    'Плотный тёмный тягучий поток энергии Земли входит в ступни и поднимается в матку.',
+    'Прозрачный светлый поток энергии Воздуха входит в ладони и двумя ручейками идёт в матку.',
+    'В матке потоки соединяются и раскручиваются спиралью вверх по всему телу до кончиков пальцев.',
+    'Почувствуй связь с энергией всех женщин: живших, живущих и будущих.',
+    'Сверни воронку в точку в матке и поблагодари пространство.'
+  ],
+  note: 'Развернул воронку — обязательно сверни: это «этика пространства», иначе наступает хаос, не будет творчества и любви. Делать несколько дней подряд.'
+},
+{
+  id: 'cvetok', t: 'Внутренний цветок: лепестки и цвета', ch: '3', cat: 'energy', type: 'медитация',
+  goal: 'Осознать место женской силы (влагалище и матка) и увидеть, в каком состоянии сейчас твой «цветок».',
+  steps: [
+    'Представь стенки влагалища как четыре лепестка: верхний, нижний, правый, левый.',
+    'Закрой глаза и внутренним взором посмотри, какого они цвета.',
+    'По желанию возьми розу (бутон означает, что ты ещё закрыта для мира), вдохни её аромат, наполни им матку.',
+    'Мысленно проведи цветком по верхнему, левому, правому и нижнему лепестку: каждый наполняется цветом.'
+  ],
+  note: 'Значения цветов: белый — невинность; розовый — потребность в заботе; красный — готовность к страсти; синий и фиолетовый — напряжённая умственная работа («синий чулок»).'
+},
+{
+  id: 'cvetok-otkr', t: 'Открыть цветок на желание / закрыть от неприятностей', ch: '3', cat: 'energy', type: 'движение',
+  goal: 'Притянуть желаемое событие или закрыть пространство перед нежелательным.',
+  steps: [
+    'Открыть: представь, что лепестки направлены на предмет желания или образ события; на выдохе они вытягиваются за пределы тела.',
+    'На задержке дыхания лепестки захватывают картинку желаемого.',
+    'На вдохе втяни лепестки обратно в матку.',
+    'Закрыть: картинку нежелательного вытягиваешь так же, но лепестки ничего не захватывают, а закрываются в бутон перед ней. Бутон втягиваешь назад.'
+  ],
+  note: 'Героиня сравнивает это с хищным цветком. Тётушка: «истинная женщина всегда немного хищница», вся трудность в выборе правильной «жертвы» и в ожидании, а не в трате сил на мелочи.'
+},
+{
+  id: 'dyhanie', t: 'Накопление энергии дыханием', ch: '3', cat: 'energy', type: 'движение',
+  goal: 'Набирать и удерживать энергию в матке.',
+  steps: [
+    'Вдохни через точку в центре лба (центр интуиции) и одновременно сожми и подтяни мышцы влагалища.',
+    'На задержке пропусти энергию по позвоночнику в матку и наполни её.',
+    'На выдохе дай энергии волной подняться наверх, в центр интуиции.',
+    'Следующий вдох. Всего 20 циклов.'
+  ],
+  note: 'Чем сильнее мышцы, тем больше энергии можно набрать и не растерять.'
+},
+{
+  id: 'myshtsy', t: 'Тренировка интимных мышц', ch: '4', cat: 'body', type: 'движение',
+  goal: 'Усилить сексуальную энергию. По книге, сильные мышцы помогают рожать, дарить наслаждение и не пускать мужчину, если не хочешь. В древности матери начинали учить этому дочерей с 8 лет.',
+  steps: [
+    'Занимайся утром и вечером, не больше 10 минут.',
+    'Сядь на пятки, спина прямая, голова слегка наклонена вперёд, глаза закрыты.',
+    'На вдохе сожми мышцы и держи, считая про себя; на выдохе полностью расслабься. Начни с 1 секунды и постепенно доведи до 10.',
+    'Схема: 10 раз медленно, 10 раз быстро, и так три серии.',
+    'Дальше увеличивай число сокращений: до 100 за раз, через 2–3 недели до 300 в день.'
+  ],
+  note: 'В романе героиня использует тренажёр для интимных мышц, его придумал В. Муранивский. Реакция мужчин, по её словам, меняется через две недели. Короткие подключения мышц в других практиках: 10–15 сжатий, чтобы «разжечь огонь» (гл. 7), 20–25 сжатий для расширения зрачков (гл. 7).'
+},
+{
+  id: 'pole', t: 'Поле сексуальности', ch: '4', cat: 'body', type: 'движение',
+  goal: 'Окутать себя «полем притягательности» перед выходом к людям.',
+  steps: [
+    'На вдохе сожми мышцы.',
+    'На выдохе открой лепестки в районе матки (примерно на четыре пальца ниже пупка).',
+    'Повторяй, пока не почувствуешь приятное тепло внизу живота.',
+    'Выйди и смотри на мужчин, не опуская глаз.'
+  ],
+  note: 'По книге, мужчины видят тех, кто замечает их и окружён полем притягательности.'
+},
+{
+  id: 'voronka-prit', t: 'Воронка на привлечение (1-й уровень)', ch: '5', cat: 'energy', type: 'движение',
+  goal: 'Физическая власть: привлечь мужчину нужного уровня. Количество поворотов зависит от того, кого хочешь привлечь.',
+  steps: [
+    'На вдохе соедини руки перед грудью, как при молитве.',
+    'На выдохе подними руки через стороны вверх и соедини ладони над головой.',
+    'На вдохе опусти руки до уровня груди; на задержке переверни ладони вниз и опусти до центра страсти (четыре пальца ниже пупка).',
+    'Раздвинь ладони и соедини пальцы: треугольник вокруг центра.',
+    'На выдохе раскрой воронку: руки вверх, локти чуть согнуты. Делай повороты по часовой стрелке.',
+    'После практики поблагодари и мысленно закрой пространство.'
+  ],
+  table: [['3 поворота', 'мужчина 1-го уровня'], ['7', '2-го уровня'], ['17', '3-го уровня'], ['34', '4-го уровня'], ['72', 'министр'], ['108', 'император']],
+  note: 'Клеткам нужно 28 дней, чтобы перестроиться с одного уровня на другой. Начинай с 7, если легко, переходи к 17.'
+},
+{
+  id: 'voronka-uderzh', t: 'Воронка на удержание (2-й уровень)', ch: '5', cat: 'energy', type: 'движение',
+  goal: 'Сексуальная власть: удерживать мужчин, деньги, пространство. Определяет, в каком пространстве ты живёшь, от хижины до дворца.',
+  steps: [
+    'Делай ту же воронку, что на привлечение, но раскрывай её вниз.',
+    'Вращайся против часовой стрелки.',
+    'Желательно делать одинаковое число поворотов вверх и вниз.',
+    'Если очень тяжело, закрой пространство. Всегда поблагодари после практики.'
+  ],
+  note: 'Одной женщине легче даётся привлечение, другой удержание: это видно при выполнении. Для «дворца» названо число 108. Тётушка предупреждает, что третий и следующие уровни она расскажет, только когда пройдены первые два.'
+},
+{
+  id: 'vihr', t: 'Вихрь (3-й уровень)', ch: '5', cat: 'energy', type: 'движение',
+  goal: 'Социальная власть: заработок, свой бизнес (магазин, салон, кафе). О женщине, которая развила бизнес, говорят, что она «раскрутила» свой вихрь.',
+  steps: [
+    'Вдох: руки перед грудью, как при молитве. Выдох: руки вверх, ладони вместе над головой.',
+    'Вдох: руки вниз до груди. На задержке переверни ладони вниз и опусти до солнечного сплетения.',
+    'Сфокусируй энергию. На выдохе через стороны подними руки над головой и переплети пальцы, направив их вверх.',
+    'Встань на цыпочки и сделай повороты.'
+  ],
+  table: [['Числа поворотов', '3, 7, 17, 34, 73, 108, 117']],
+  note: 'Риск уровня: мужская энергия начинает доминировать, а женские 2-й (сексуальность) и 4-й (эмоциональность) исчезают; мужчина видит партнёра или конкурента, но не женщину. Деньги, по книге, женщине приходят через творчество.'
+},
+{
+  id: 'voronka-serdca', t: 'Воронка сердца (4-й уровень)', ch: '5', cat: 'energy', type: 'движение',
+  goal: 'Эмоциональная власть: обаяние и слава. Когда женщина доходит до этого уровня, деньги появляются сами.',
+  steps: [
+    'Ноги параллельно. На выдохе подними руки и соедини над головой.',
+    'На вдохе опусти треугольник к сердцу; на выдохе раскрой горизонтальную воронку.',
+    'На задержке представь, как тебе рукоплещут почитатели, берут автографы, ты купаешься в лучах славы.',
+    'На вдохе закрой воронку и сложи руки на груди.'
+  ]
+},
+{
+  id: 'test-kraski', t: 'Тест красной и белой краской', ch: '5', cat: 'energy', type: 'медитация',
+  goal: 'Понять, какая энергия в тебе преобладает: женская (красная) или мужская (белая).',
+  steps: [
+    'Закрой глаза и представь холст с твоим портретом.',
+    'В руках палитра, на ней только красная и белая краска.',
+    'Раскрась голову, руки, туловище, ноги.',
+    'Открой глаза и оцени в процентах, какого цвета больше.'
+  ],
+  note: 'Идеал по книге: мужской энергии не больше 25%, женской 75%. У героини вышло 60% белого и 40% красного, то есть преобладает мужская. Книга связывает перевес мужской энергии с тем, что рядом с такой женщиной мужчины слабеют, а сильные мужчины сторонятся сильных женщин; называет также женские болезни.'
+},
+{
+  id: 'petuhi', t: '«Петухи»', ch: '5', cat: 'energy', type: 'движение',
+  goal: 'Отделить мужскую энергию от женской, принять и полюбить себя; убирает страх успешности, публичности и известности. Делается рано утром.',
+  steps: [
+    'Ноги параллельно. На выдохе подними руки над головой и соедини в треугольник.',
+    'На вдохе опусти треугольник до груди, мысленно разделив энергию: белая вправо, красная влево.',
+    'На выдохе переверни треугольник вниз и опусти до земли. Так три раза.',
+    'Сядь, поставь локти в ямочки над коленями и жди, пока руки соединятся. Какая рука идёт быстрее, та энергия в тебе преобладает.',
+    'Подними руки до подбородка, большие пальцы поставь под подбородок, указательными надави на точку под носом (точка прапамяти), остальные пальцы сложи рупором.',
+    'В рупор сделай восемь выдохов и три раза крикни «кукареку», приветствуя восход солнца.',
+    'Большими пальцами поднимись по лицу до макушки и подними руки, как встающее солнце. Открой глаза.'
+  ]
+},
+{
+  id: 'stihii', t: 'Встреча со стихиями (посвящение жриц)', ch: '6', cat: 'elements', type: 'медитация',
+  goal: 'Определить, какая стихия и какое состояние в тебе проявлены сильнее всего, и получить дары четырёх стихий.',
+  steps: [
+    'Закрой глаза, вдохни и на выдохе представь себя в древнем лесу. Выйди на поляну.',
+    'Встреться по очереди с четырьмя жрицами и почувствуй, чья энергия тебе созвучнее.',
+    'Вода (зелёная, юг): омовение в озере и обращение к воде. Дар: чёрная жемчужина, эмоциональная власть.',
+    'Огонь (красная, восток): танец у костра. Дар: красная свеча (когда догорит, зажги новую от неё), сексуальная власть.',
+    'Земля (жёлтая, запад): пещера и розовый кварц. Дар: розовый кристалл на цепочке, физическая власть.',
+    'Воздух (голубая, север): рассвет на холме. Дар: перо, ментальная власть.'
+  ],
+  note: 'Каждое обращение к стихии заканчивается просьбой о силе и власти покорить непокорённое и исполнить неисполненное. С какой жрицей комфортнее, та стихия и то состояние в тебе сильнее. В романе это ночь на Ивана Купала (6 июля) на острове Ладожского озера; весь день до этого молчание, оно копит энергию.'
+},
+{
+  id: 'obmen', t: 'Обмен качествами в круге подруг', ch: '6', cat: 'elements', type: 'движение',
+  goal: 'Передать друг другу недостающие качества: женщины усиливают друг друга, если в них проявлены разные энергии. Поэтому подруги часто дружат вчетвером.',
+  steps: [
+    'Встаньте в круг (идеально четверо, по одной на стихию).',
+    'Отдающая встаёт в центр напротив одной из подруг, прикладывает ладони к своему центру и на выдохе, как будто достав шар, протягивает его, называя качества: «Я делюсь с тобой…».',
+    'Принимающая на вдохе притягивает шар или поток к себе, прикладывает ладони к своему третьему центру, держит, пока не почувствует перешедшие качества, и выдыхает.',
+    'Пройдите так по кругу: каждая отдаёт каждой.',
+    'Потом встаньте в круг и постойте, держась за руки.'
+  ],
+  table: [['Хозяйка (Земля)', 'третий центр: два пальца выше пупка'], ['Любовница (Огонь)', 'центр страсти: два пальца ниже пупка'], ['Девочка (Вода)', 'сердечный центр: центр груди'], ['Королева (Воздух)', 'центр лба: третий глаз']],
+  note: 'Книга: только наполнив мужчину, мы можем что-то получить взамен.'
+},
+{
+  id: 'znakomstvo', t: 'Пять шагов знакомства', ch: '7–8', cat: 'attract', type: 'приём',
+  goal: 'Начать знакомство с мужчиной из состояния любовницы.',
+  steps: [
+    'Настрой: сожми мышцы 10–15 раз («мехами раздуваешь огонь») и почувствуй внутри костёр.',
+    'Взгляд: около 7 секунд, с обещанием страсти. Про себя повтори: «Вы восхитительны, я восхитительна, любовь восхитительна». Потом отведи глаза как бы нехотя.',
+    'Улыбка и кивок: «зовущая улыбка» (рот чуть приоткрыт, уголки губ подняты, в глазах обещание) и лёгкий кивок, как старому знакомому. Если мужчина не откликнулся, это не твой проигрыш: у него могла быть любая причина.',
+    'Приближение и слово: окажись на расстоянии вытянутой руки и скажи что-нибудь. Неважно что, важно, чтобы он услышал твой голос.',
+    'Прикосновение: «как бы случайное», оно даёт искру.',
+    'Быстрое исчезновение. Первая встреча не дольше 10–15 минут, о себе только общее и загадочное.'
+  ],
+  note: 'Не опускай глаз и смотри на мужчин. Если взглянув во второй раз видишь, что он смотрит, улыбнись.'
+},
+{
+  id: 'slovo', t: 'Что сказать незнакомцу', ch: '7', cat: 'attract', type: 'приём',
+  goal: 'Заговорить первой, не выдумывая сложного.',
+  steps: [
+    'Три безопасные темы: про себя («Я потеряла серёжку», «Опять идёт дождь», «Ой, а что я здесь делаю?»), про него, про то, что происходит вокруг.',
+    'Попроси совета или помощи: мужчины любят советовать и помогать (заблудилась, выбираешь что-то в магазине).',
+    'Похвали (галстук, одеколон) и заинтригуй: «Мужчины, выбирающие такой галстук, обладают одной особенностью». В чём особенность, скажешь как-нибудь потом.'
+  ]
+},
+{
+  id: 'golos', t: 'Голос из глубины', ch: '7', cat: 'attract', type: 'приём',
+  goal: 'Сделать голос чувственным и завораживающим.',
+  steps: [
+    'Сфокусируйся на матке, как будто голос звучит из глубины твоего естества.',
+    'Почувствуй низкие вибрации и скажи фразу.'
+  ]
+},
+{
+  id: 'ladoni', t: 'Огненные ладони (прикосновение)', ch: '7', cat: 'attract', type: 'движение',
+  goal: 'Сделать прикосновение таким, чтобы оно зажигало страсть.',
+  steps: [
+    'Представь костёр в центре матки и почувствуй жар.',
+    'Жар поднимается до середины груди, делится на два потока и идёт в руки: в центре ладоней появляются огненные шарики.',
+    'Посылай шарики в центр страсти мужчины (четыре пальца ниже пупка, верх лобковой кости).',
+    'Дотронься как бы нечаянно: проходя мимо, поправляя галстук, привлекая внимание к чему-то. Проведи рукой с лёгким вздохом.'
+  ]
+},
+{
+  id: 'kasaniya', t: 'Приёмы касаний', ch: '7', cat: 'attract', type: 'приём',
+  goal: 'Первые прикосновения при знакомстве. Важнее приёмов передать энергию.',
+  steps: [
+    'Первые касания осторожные, кончиками пальцев: изучаешь и дразнишь.',
+    'Пощупай пульс: «сердце бьётся быстрее, наверное, потому что я рядом». Дотронься до сердца: «Я уже здесь?»',
+    'Заговори про линии на руке: «выдающаяся линия успеха», «длинная линия жизни».',
+    'Можно «споткнуться» или попросить поддержать, пока вытряхиваешь что-то из туфельки.',
+    'Приём «Сделай то, что я хочу сделать»: начни движение к нему и в последнюю секунду прерви. Мужчина интуитивно продолжит и сам прикоснётся.'
+  ],
+  note: 'Игра гарема: «Ангел, подруга и возлюбленная», касаться из трёх состояний. Если женщина внутренне съёживается, мужчина это сразу чувствует.'
+},
+{
+  id: 'obraz', t: 'Образ: красный, каблуки, серьги', ch: '8', cat: 'attract', type: 'приём',
+  goal: 'Привлечь внимание с помощью образа. Мужчина ищет «долговязую девочку с телом подростка и мудростью женщины».',
+  steps: [
+    'Красный: цвет огня и страсти, он всегда привлекал взоры мужчин (героиня ссылается на статью о гормоне желания).',
+    'Привлекают: длинные серьги, высокие каблуки, тонкая талия, высокая грудь, длинная шея, длинные ноги.',
+    'Создавай иллюзию: корсет делает талию тонкой, а грудь пышной, и в нём легко держать энергию; серьги удлиняют шею; каблуки удлиняют ноги и возвращают гармоничные пропорции.',
+    'Драгоценности: подаренные мужчиной делают сильнее, купленные самой лишь красивое украшение; фамильные несут энергию рода. Рубин — камень власти любовницы.'
+  ]
+},
+{
+  id: 'pod-kabluk', t: 'Мужчина под каблуком', ch: '8', cat: 'relations', type: 'медитация',
+  goal: 'Сделать мужчину спокойным и послушным, «заполнить каблуки».',
+  steps: [
+    'Держи туфлю на левой ладони.',
+    'Представь мужчину справа и уменьши его до размера щепотки.',
+    'На вдохе возьми его правой рукой, на выдохе посади в каблук, как в домик.'
+  ],
+  note: 'В романе придирчивый клиент после этого стал покладистым, а грозная заказчица перенесла сроки.'
+},
+{
+  id: 'svecha', t: 'Ритуал со свечой (состояние любовницы)', ch: '8', cat: 'elements', type: 'ритуал',
+  goal: 'Настроиться на состояние любовницы: именно состоянием женщина зажигает мужчину.',
+  steps: [
+    'Расставь по комнате зажжённые красные свечи.',
+    'Возьми свечу и представь, что её пламя соединяется с твоим центром страсти (четыре пальца ниже пупка).',
+    'Произнеси обращение к стихии Огня: просьба быть спутницей мечтаний и начинаний, дать озарение, сексуальность и горение, силу совершить несовершенное и исполнить неисполненное.'
+  ],
+  note: 'Результат в романе: дрожь предвкушения, блеск глаз, лёгкая порочная улыбка, хриплый голос.'
+},
+{
+  id: 'poklonniki', t: 'Иллюзия поклонников', ch: '8', cat: 'relations', type: 'приём',
+  goal: 'Создать вокруг себя свиту, пусть воображаемую: королеву делает свита. Мужчина должен чувствовать, что сражается за приз.',
+  steps: [
+    'Как бы между прочим расскажи о безделушке, которую «прислал поклонник».',
+    'На приглашение скажи, что этот вечер занят старым знакомым, который давно просит о свидании (даже если проведёшь вечер дома с книгой).',
+    'Сама отправь себе цветы «от тайного вздыхателя», пересказывай «полученное письмо».',
+    'Подчёркивай исключительность именно этого мужчины и уважительно говори о других.'
+  ],
+  note: 'Книга: «то, что хотят все, кажется слаще». Если мужчина не готов сражаться за тебя в начале отношений, стоит подумать, нравишься ли ты ему.'
+},
+{
+  id: 'uklonenie', t: 'Уклонение: королева на первых свиданиях', ch: '8', cat: 'relations', type: 'правило',
+  goal: 'После первой встречи сразу перейти из состояния любовницы в состояние королевы: недоступная и манящая, умеющая сдерживать желания.',
+  steps: [
+    'Две главные задачи периода: уклонение и получение знаний о мужчине.',
+    '6–10 свиданий уклоняйся от близости, не отвергая мужчину. Ты так же пылаешь, но «что-то мешает».',
+    'Встречайся на нейтральной территории: ресторан, театр, гости. Не провоцируй ни его, ни себя.',
+    'Не проявляй инициативу: не звони и не пиши первой, не соглашайся сразу на свидание.',
+    'Пусть он вложит время, деньги, знания, эмоции: он ценит то, что далось с трудом.'
+  ],
+  note: 'В романе тётушка ограничивает встречи двумя в неделю и велит исчезать через два-три часа. Японская фраза из книги: «уклонение приводит к продвижению».'
+},
+{
+  id: 'razvedka', t: 'Разведка: что любит мужчина', ch: '9', cat: 'relations', type: 'приём',
+  goal: 'Собрать полную информацию о мужчине до близости и узнать, какую женщину он ищет.',
+  steps: [
+    'На 3–6 встречах узнай: что он ищет в женщинах, что ценит в мужчинах, любимое блюдо и животное, музыку, книги, тайные фантазии и мечты.',
+    'Спрашивай по порядку: сначала о будущем, потом о прошлом, потом о настоящем.',
+    'Слушай внимательно, запоминай детали, можно записывать.',
+    'Позже деликатно спроси про первый поцелуй и первую любовь: чем больше он расскажет, тем больше чувств вложит в тебя.',
+    'О себе рассказывай только то, что показывает общность ваших вкусов и взглядов. Не рассказывай про прошлые романы: чем меньше говоришь, тем больше он домысливает «женщину мечты».'
+  ],
+  note: 'Если ожидания мужчины тебе не нравятся, уйти легко, пока не было близости. Мужчине же за первые три встречи нужно рассказать о себе всё.'
+},
+{
+  id: 'obida-sebe', t: 'Убрать обиду на себя', ch: '9', cat: 'release', type: 'движение',
+  goal: 'Поднять себя из зоны низких вибраций (болезни, нищета, унижение) в зону высоких (счастье, процветание). Обида на себя, по книге, разрушает сильнее всего.',
+  steps: [
+    'Ляг на пол ниц, правая рука вперёд (поза раба). Прочувствуй обиду на себя и прими решение её убрать.',
+    'Скажи себе, что ты умная, красивая, успешная и старательная.',
+    'Встань на левое колено и с правого колена «отруби путы»: рубящими движениями справа налево, три раза по три.',
+    'Выпрямись и так же убери путы с левого колена.'
+  ],
+  note: 'В гл. 14 героиня повторяет практику и добавляет к ней ботфорты, пояс и погоны: погоны символизируют меру ответственности и способность управлять миром и событиями.'
+},
+{
+  id: 'verhom', t: 'Верховая езда', ch: '9', cat: 'energy', type: 'движение',
+  goal: 'Защитить себя от зон грязи, боли и неудачи и оседлать желание. В романе помогает унять желание, когда близость ещё рано.',
+  steps: [
+    'На вдохе надень воображаемые ботфорты: они защищают от зоны грязи (8 вершков от земли) и зоны боли (16 вершков).',
+    'Надень широкий пояс, он закрывает нижние центры и защищает от зоны неудачи (30 вершков).',
+    'Сядь на коня: конь это желание.',
+    'Правая рука впереди, левая сзади; на вдохе соедини их в замок между ногами и сделай восемь высоких прыжков.'
+  ],
+  note: 'Кто не умеет управлять энергией желания, несётся к пропасти; кто умеет, может покорить мир. Высота холки коня 34 вершка — зона удачи («он на коне»).'
+},
+{
+  id: 'koronaciya', t: 'Коронация (второе лоно — рот)', ch: '9', cat: 'elements', type: 'медитация',
+  goal: 'Почувствовать себя королевой: утвердить своё величие и уверенность перед свиданием.',
+  steps: [
+    'Закрой глаза и коснись языком нёба: нёбо это купол твоего тронного зала. Тьма рассеивается.',
+    'Рассмотри стены, пол, трон, из какого он материала. Убери хлам, пыль, всё сломанное.',
+    'Распахни окна, наполни зал светом и свежим воздухом; посмотри на королевский сад и фонтаны.',
+    'Выпорхни из окна, облети дворец и свои владения: пашни, леса, источники, подданных. Вернись во дворец.',
+    'Звучит торжественная музыка, справа стоят мужчины, слева женщины. На плечи накидывают мантию, ты садишься на трон, тебе возлагают корону и вкладывают скипетр и державу.',
+    'Отныне каждое твоё слово закон: «ты королева».'
+  ]
+},
+{
+  id: 'korona', t: 'Корона жестом', ch: '9', cat: 'elements', type: 'движение',
+  goal: 'Быстро ощутить корону на голове, состояние королевы.',
+  steps: [
+    'Растопыренные пальцы правой руки поставь на макушку, как в жесте певицы в песне «Все могут короли».',
+    'Другую руку так же, пальцами врозь, приложи ко лбу.',
+    'На вдохе поменяй руки местами. Появляется ощущение короны.'
+  ],
+  note: 'В романе мужчина сам сказал героине, что у неё на голове корона.'
+},
+{
+  id: 'nevod', t: 'Невод привлекательности', ch: '10', cat: 'attract', type: 'ритуал',
+  goal: 'Перед свиданием собрать силу четырёх стихий и «сплести» свою привлекательность.',
+  steps: [
+    'Собери предметы женской силы: красная и розовая свечи (Огонь), перо (Воздух), розовый кварц (Земля, усиливает женскую энергию), чаша с водой и каплями ароматического масла (Вода).',
+    'Скажи, что признаёшь и чтишь эти дары, которые есть ты, и вплетаешь их силу в свой невод привлекательности.',
+    'Зажги свечи напротив зеркала, включи музыку и медленно танцуй, глядя на себя и на отражение свечей.',
+    'Пером проведи сверху вниз, убирая негатив. Подержи в ладонях розовый кварц.',
+    'Двумя пальцами (указательным и средним) из чаши коснись трёх центров: ментального (центр лба), любви (центр груди), страсти (низ живота).',
+    'Повторяй формулу: поток страсти, наполни меня красотой, сладострастием и сексуальностью; я умею прельщать и завлекать.'
+  ]
+},
+{
+  id: 'pervaya-noch', t: 'Первая ночь и правило Золушки', ch: '10', cat: 'relations', type: 'правило',
+  goal: 'Провести первую близость так, чтобы мужчина остался в состоянии желания.',
+  steps: [
+    'Перед этим перейди из состояния королевы в состояние девочки.',
+    'Цвет белья: белое или бледно-жёлтое. Будь чувственной, но выгляди неопытной.',
+    'Не удивляй мужчину знанием приёмов и «французскими ласками»: позволь ему учить. Просто наслаждайся.',
+    'Одежда: бархат (всё, к чему прикасается мужчина, должно быть приятным на ощупь), мелкие пуговицы (препятствие усиливает желание).',
+    'Исчезни, как Золушка, как только страсть чуть утихла. Если он не видит и не слышит тебя от 3 до 10 дней, начинает понимать, что может потерять.'
+  ],
+  note: 'Когда мужчина получил то, к чему стремился, ему нужно время понять, то ли он искал. «Расстояние усиливает любовь.» Не верить, что обстоятельства могут помешать ему найти тебя.'
+},
+{
+  id: 'ogon-krug', t: 'Выход из огненного круга любви', ch: '11', cat: 'release', type: 'движение',
+  goal: 'Выйти из состояния, когда поглощена мужчиной и не можешь думать ни о чём другом; не плакать, не терять энергию.',
+  steps: [
+    'Встань в центре комнаты и представь вокруг себя пылающий круг.',
+    'Вытяни левую руку и прочерти полукруг, воображая, что под рукой водопад заливает огонь. То же правой рукой с правой стороны.',
+    'Выйди правой ногой из круга и скажи: «Моё дело правое».',
+    'Сделай шаг вправо, начерти такой же круг и повтори всё. Затем два шага влево и повтори весь ритуал.',
+    'Посади мужчину в пепелище трёх кругов: он будет мучиться сомнениями и мыслями о тебе.'
+  ],
+  note: 'В это время выглядеть счастливой и довольной; ждать, не предпринимать шагов первой.'
+},
+{
+  id: 'magazin', t: 'Волшебный магазинчик (состояние девочки)', ch: '11', cat: 'elements', type: 'медитация',
+  goal: 'Вернуть качества состояния девочки, которых не хватает: непосредственность, непредсказуемость, смешливость, лёгкость, лукавство.',
+  steps: [
+    'Определи, каких качеств не хватает.',
+    'Представь магазинчик, где есть всё на свете (белая резная мебель, пионы, кружево, шкаф с нарядами).',
+    'Для каждого качества выбери вещь. Пример героини: розовый бант — непосредственность (приколола в область лона), бисерная бабочка в волосы — непредсказуемость, бусы из снежинок — смешливость, связка воздушных шаров — лёгкость, соломенная шляпка с лентами — лукавство.',
+    'На вдохе возьми вещь из тонкого пространства, на выдохе надень или получи.',
+    'Почувствуй, как качества становятся частью тебя, и сделай то, что хочется: например, попрыгай на одной ножке.'
+  ],
+  note: 'Вариант героини в 2003 году под «Мэри Поппинс»: голубые башмачки — озорство, муфточка — мягкость, платье в горох с бантом — игривость и дерзость, хвостики с розочками — восторженность.'
+},
+{
+  id: 'zabota', t: 'Включение на заботу', ch: '12', cat: 'elements', type: 'медитация',
+  goal: 'Когда мужчина не проявляет заботу, сколько ни намекай: открыться заботе и получить её.',
+  steps: [
+    'Представь тёплый летний день, веранду, кресло-качалку, книгу.',
+    'В калитку входит девочка не старше пяти лет: это ты. Подбеги, возьми на руки, обними, поцелуй, скажи, что очень любишь, что она самая красивая и умная и станет сильной, уверенной, соблазнительной женщиной.',
+    'Танцуйте, смейтесь, играйте в догонялки и прятки. Девочка даёт тебе игривость, непосредственность, умение радоваться каждому мгновению.',
+    'Когда она устанет, качай её на руках: она уменьшается, как Алиса, до размера Дюймовочки и до горошины.',
+    'Положи горошину себе в сердце или в сердце того, в чьей заботе нуждаешься.'
+  ]
+},
+{
+  id: 'spasitel', t: 'Проверка «спасителем»', ch: '12–13', cat: 'relations', type: 'приём',
+  goal: 'Дать мужчине проявить заботу и проверить, готов ли он примчаться на помощь. Забота включает в мужчине любовь: чем больше заботится, тем сильнее привязывается.',
+  steps: [
+    'Позволяй ему заботиться: мы привыкли решать всё сами и не оставляем шансов.',
+    'Иногда создай ситуацию, где он может «спасти»: застряла, отстала от поезда, не можешь открыть дверь.',
+    'Будь готова прекратить отношения, если он не оправдает ожиданий.',
+    'Искренне и восторженно поблагодари.'
+  ],
+  note: 'Книга: иллюзии украшают жизнь, люди больше всего боятся скуки, особенно мужчины. Героиня: мужчины влюбляются в тех, кого спасли и в кого вложили эмоции. Ситуация также показывает, как мужчина поведёт себя, когда ты от него зависишь (например, с малышом).'
+},
+{
+  id: 'pole-deyat', t: 'Поле деятельности: рисовать будущее мужчины', ch: '13', cat: 'relations', type: 'приём',
+  goal: 'Вдохновлять мужчину на дело. Формула книги: мужчина действует, а женщина создаёт поле деятельности.',
+  steps: [
+    'Слушай мужчину и представляй его идею воплощённой, причём смелее, чем он допускает (ресторан превращается в международную сеть): это вдохновляет и окрыляет.',
+    'Если чувствуешь, что дело обречено, но не можешь объяснить почему, не возражай: слушая, представляй пустоту. Мужчина сам почувствует бесперспективность.'
+  ],
+  note: 'Главное, чего, по книге, не хватает мужчинам, — веры в собственные силы.'
+},
+{
+  id: 'vera', t: 'Вера в мужчину', ch: '14', cat: 'relations', type: 'правило',
+  goal: 'Вера и доверие — главная эмоциональная потребность мужчины. «Твоя вера дарит ему крылья, твои сомнения связывают руки.»',
+  steps: [
+    'Поддержи любой его проект без капли сомнения в его уме и талантах.',
+    'Верь в его верность, даже когда он не пришёл ночевать. Это обезоруживает и показывает веру в себя.',
+    'Не критикуй и не напоминай о неудачах, даже оправданно: слова поддержки затмевают критику.',
+    'При измене не устраивай скандал: спроси себя, что в тебе заставило его изменить. «Уходят не к кому-то, а от тебя.»',
+    'Давай ему видеть, что нравишься многим, но принадлежишь одному. Показывай и создавай иллюзию, что ему тоже могут нравиться многие, но ты знаешь, что он верен тебе.'
+  ],
+  note: 'Мужчину, в которого верят, видно: плечи развёрнуты, голова поднята, взгляд открыт, движения спокойны.'
+},
+{
+  id: 'assa', t: 'Освобождение от боли и обиды («А-С-С-А»)', ch: '14', cat: 'release', type: 'движение',
+  goal: 'Избавиться от обиды: при обиде энергия теряется, женщину тянет к земле. «На обиженных воду возят.» По книге, обидчивые люди, как правило, бедные и больные; женщина, которая не обижается, выигрывает.',
+  steps: [
+    'Согни руки в локтях. Покажи «всё хорошо»: большой палец вверх, остальные собраны в кулак.',
+    'Реши, что обиделась, и опусти пальцы вниз. Внутренне прими решение избавиться от обиды.',
+    'Большими пальцами три раза проведи вокруг стопы, закончив в точке на внутренней стороне ноги с внешней стороны косточки. Подними пальцы вдоль ног до колен.',
+    'Три круга вокруг коленок изнутри наружу. Продолжай по внутренней стороне бёдер к лону.',
+    'Соедини пальцы над клитором и нарисуй латинскую букву V к рёбрам, от рёбер веди к середине груди (получается знак бубен).',
+    'Большие пальцы упираются в центр груди. Глубокий вдох, представь кол в груди и на выдохе с криком «А-С-С-А» выдерни его.',
+    'Повторяй, пока не станет легче.'
+  ],
+  note: 'Тётушка: бубновая дама вечно молодая; обиды старят женщину и превращаются в болезни. Первый раз героине трудно крикнуть: звук застревает, пока она не разозлилась и не крикнула по-настоящему.'
+},
+{
+  id: 'varenye', t: 'Варенье с энергией', ch: '15', cat: 'relations', type: 'ритуал',
+  goal: 'Подарить мужчине то, что несёт твою энергию и «соединяет вас на тонком плане». Марк в романе сказал, что варенье, приготовленное любимой женщиной, символизирует её внимание и заботу.',
+  steps: [
+    'Сама выбери ягоды (в романе на рынке) и сама свари. Не поручай кухарке.',
+    'Когда варенье остынет, каждую банку подержи в ладонях и скажи: «Варенье, наполнись моей энергией, моей любовью, моей нежностью».',
+    'Подари через несколько дней (в романе через пять, на выходных): тогда эффект сильнее.'
+  ],
+  note: 'Варенье, сваренное без любви, «мёртвое», мужчина это чувствует. Народная традиция: на выданье девушек просят подать воды, и суженой становится та, из чьих рук она кажется вкуснее. Прежде чем подать мужчине что-то, подержи это в руках и наполни своей энергией.'
+},
+{
+  id: 'syurpriz', t: 'Сюрприз по его желаниям', ch: '15', cat: 'relations', type: 'приём',
+  goal: 'Показать внимание: внимание это конкретные действия, когда делаешь именно то, что ему нравится. Внимание к деталям ключ к мужскому сердцу.',
+  steps: [
+    'Угадывай ожидания и реализуй фантазии человека, а не свои.',
+    'Узнавай через друзей и прямо из разговоров: например, спроси, какого художника он любит.',
+    'В романе на день рождения: лимузин «по американской традиции», шампанское и любимый коньяк, свой образ в его вкусе, «никто ещё не дарил мне себя».'
+  ],
+  note: 'Подарок на вопрос «что тебе подарить?» может быть ответом вроде: «если купишь часы, буду считать минуты до встречи, подсвечник — вспоминать, как мы зажигаем свечи».'
+},
+{
+  id: 'prinyat', t: 'Принять мужчину, а не понимать', ch: '16', cat: 'relations', type: 'правило',
+  goal: 'Мужчина не меняется, а женщина пластична. Когда примешь его таким, какой он есть, он будет готов меняться, но не раньше.',
+  steps: [
+    'Помни пословицу: мужчина женится, надеясь, что женщина не изменится, а она меняется; женщина выходит замуж, надеясь, что он изменится, а он не меняется.',
+    'У любого, как у Луны, есть тёмная и светлая сторона. Исследование тёмной оставь врагам и конкурентам, замечай светлую.',
+    'Смотри на поведение мужчины как на стихийное бедствие: влиять нельзя, можно наблюдать и быть готовой.',
+    'Определи по таблице архетипов (ниже), к какой категории он относится, и принимай его достоинства и ограничения.'
+  ],
+  note: 'Не требуй золотых дворцов от художника и сильных чувств от правителя.'
+},
+{
+  id: 'podarki', t: 'Правила получения подарков', ch: '17', cat: 'gifts', type: 'приём',
+  goal: 'Получать подарки и этим расширять зону комфорта мужчины. По книге, мужчины дарят, потому что интуитивно чувствуют: им воздастся в десятикратном размере.',
+  steps: [
+    'Говори о желаниях только сидя или лёжа рядом с ним, лучше с левой стороны: это сторона любовницы.',
+    'Ставь максимально конкретную задачу: не «порадуй меня», а металл, размер камня, где видела, покажи каталог или рекламу.',
+    'Формулируй от его ценностей (щедрость, значимость, вкус): «Я рада, что встретила мужчину с безупречным вкусом, мне было бы приятно, если бы ты выбрал…»',
+    'Проси чуть дороже, чем он может себе позволить: так расширяется его зона комфорта.',
+    'Дай время на решение и вернись к теме через три дня.',
+    'Не решай за него: если ты скажешь «куплю сама», он не получит шанса.',
+    'Закладывай «программу на подарки» рядом с мужчиной, а не за тысячу километров.'
+  ],
+  table: [['Минимум на решение у мужчины', '7 часов'], ['Затем', '14 часов, 72 часа, 1 год и 3 месяца, 3 года и 7 месяцев'], ['Самая большая программа', '12 лет']],
+  note: 'Зона комфорта: что у мужчины есть сейчас (машина, жильё, доход). Если её не расширять, она начинает сужаться, и он теряет то, что имеет. Рассматривай себя как инвестиционный фонд: чем больше в тебя вложат, тем больше мужчина получит от мира.'
+},
+{
+  id: 'rog', t: 'Рог изобилия', ch: '17', cat: 'gifts', type: 'движение',
+  goal: 'Если внутри не веришь, что достойна подарков, ты отвергаешь саму возможность получать их. Практика убирает обиду на мир за то, что он не делал подарков.',
+  steps: [
+    'Встань, ноги на ширине плеч, руки в стороны; на выдохе подними их над головой.',
+    'Вдох. На выдохе покажи миру большие пальцы вверх: всё в порядке.',
+    'Вспомни обиду на мир, переверни пальцы вниз, соедини подушечки больших пальцев на уровне низа живота и захвати обиду.',
+    'Поднимай обиду вверх по центру («дорога жизни») на долгом вдохе. От макушки резкий выдох «ХО», выбрось обиду, подними большие пальцы вверх: мы всего достойны, благодарю мир за щедрость.',
+    'Мир раскрывает рог изобилия: соедини пальцы рук в «рог», повёрнутый к тебе, и чётко представь, что приходит в твою жизнь.',
+    'Переплети пальцы, гладь себя по голове и представь, как мир осыпает тебя бриллиантами.'
+  ]
+},
+{
+  id: 'otvet', t: 'Эмоциональный ответ на подарок', ch: '17, 18', cat: 'gifts', type: 'правило',
+  goal: 'Мужчина, делая подарок, ждёт эмоционального возврата: видеть, слышать и чувствовать, что он доставил радость. Признание заслуг, по книге, то, чего ждут все мужчины.',
+  steps: [
+    'Выражай искренний, открытый восторг («щенячий восторг»), не сдерживайся.',
+    'Если в первый момент забыла, поблагодари позже: лучше поздно, чем никогда.',
+    'Благодари за старание: ему трудно представить, что тебя порадует, он боится «купить чушь».',
+    'Не отказывайся от подарка и не ставь под сомнение его возможности.'
+  ],
+  note: 'Мужчины любят момент оплаты: достав бумажник, они сообщают миру о своей силе. «Женщины тратят, а мужчины вкладывают.» Дешёвый подарок-оберег допустим: проявлять внимание, но не обрушивать на мужчину шквал подарков и эмоций (гл. 21).'
+},
+{
+  id: 'fr-noch', t: 'Французская ночь (ролевой сюрприз)', ch: '18', cat: 'relations', type: 'ритуал',
+  goal: 'Сюрприз и роль: показать мужчине что-то новое и дать ему почувствовать себя ценимым.',
+  steps: [
+    'Договорись с гостиницей: привезти свои вазы, проигрыватель, свечи, шампанское и фрукты.',
+    'Декор: срезанные головки роз и свечи в чашах с водой, тёмно-бордовые шёлковые простыни, аромат жасмина (спец. духи для помещений), диск французской музыки.',
+    'Роль «маркизы де Помпадур»: чёрное кружевное бельё, чулки, шёлковый халат, тёмный парик-каре, нарисованная мушка, красный перьевой веер.',
+    '«Же тем» по-французски «я тебя люблю»: мужчине легче сказать это на чужом языке.'
+  ]
+},
+{
+  id: 'provokaciya', t: 'Провокация: «уезжаю навсегда»', ch: '18', cat: 'relations', type: 'приём',
+  goal: 'Если через год отношений нет предложения, перейти к решительным действиям. По книге, затем отношения превращаются в растянутую пытку: мужчина привыкает получать всё просто так.',
+  steps: [
+    'Около полугода присматриваешься; решив, что мужчина достоин быть отцом детей, мягко, но настойчиво подводишь к мысли, что останешься, только став женой.',
+    'Если он не делает шаг, скажи, что получила письмо (в романе: дела с нотариусом и наследством) и через две недели уезжаешь, вряд ли вернувшись.',
+    'Пути назад нет: если предложения не последует, придётся уехать.',
+    'Если мужчина даже не пытается тебя задержать, тем более не стоит тратить на него время.'
+  ],
+  note: 'Мужчине необходимо время, чтобы влюбиться: минимум три месяца без секса, «испытательный срок». В идеале близость в первую брачную ночь. Без штампа мужчина не признаёт ответственность и не делится достижениями; жена могла бы претендовать на половину нажитого благодаря ей. «Мужчины таковы, какими мы им позволяем быть.» Прабабушка: «Выходи замуж столько раз, сколько тебя зовут».'
+},
+{
+  id: 'sensornye', t: 'Пять сенсорных доминант мужчины', ch: '20', cat: 'relations', type: 'приём',
+  goal: 'Роль хозяйки. Предпочтения мужчины закладываются в первые годы жизни; он воссоздаёт привычный с детства мир. Женщина может лишь как можно точнее скопировать этот мир, собрав информацию.',
+  steps: [
+    'Зрение. Образ женщины (цвет волос, причёска, стиль, макияж, обувь) должен соответствовать его идеалу. Женщины видят детали, мужчины целое. Помогай выбирать рубашку, галстук, костюм: советуй мягко, не диктуй. Не покупай ему вещи на свои деньги, пока не муж. Не становись «мамочкой».',
+    'Осязание. Для мужчины увидеть значит потрогать; он жаждет прикосновений. Проходя мимо, проведи рукой и поцелуй. Каждое утро настоящий поцелуй не менее 7 секунд (оберегает от притязаний других женщин, включает в твой контур). Раз в неделю массаж.',
+    'Обоняние. Позволь выбрать для тебя духи, но никому не говори и не показывай, какой запах его привлекает. Запах готовящейся еды мужчинам неприятен (лучше столовая). Единственный запах, рождающий желание: ваниль, добавляй её в выпечку. Самый неприятный: запах старости. Не храни старые вещи, не води к старым родственникам, раз в год вывешивай вещи на солнце, наполняй дом светом.',
+    'Вкус. Не корми нелюбимым, даже полезным. Научись любимому блюду (борщ), выведай рецепты его матери: лучший комплимент «ты готовишь как моя мама».',
+    'Слух. У мужчины слух на последнем месте: он не слушает дольше 20 секунд. На «Как прошёл день?» отвечай «Замечательно, дорогой, а у тебя?» и слушай его, не отвлекаясь. Единственное, что он слушает всегда, это комплименты, но реальные достоинства, а не мнимые (иначе лесть).'
+  ],
+  note: 'Индивидуальность проявляется в том, как ты сыграешь, а не в том, во что одета: на физическом уровне ты актриса, это костюмы и декорации эпохи. «Уступая в малом, выиграешь большее.»'
+},
+{
+  id: 'massazh', t: 'Туземный массаж («зигзаги любви»)', ch: '20', cat: 'body', type: 'приём',
+  goal: 'Радовать мужчину прикосновением раз в неделю. Если этого не делает любимая женщина, он вынужден искать прикосновений на стороне (тактильный голод).',
+  steps: [
+    'Мужчина лежит на животе.',
+    'Рисуй ногтями «зигзаги любви»: от правого плеча до левого, по диагонали вниз, захватывая бока (самые чувствительные места).',
+    'На вдохе проводи ноготками вверх вдоль позвоночника. Пять таких движений.',
+    'Круговые касания копчика (по книге, сосредоточение сексуальной энергии мужчины).',
+    'Полукружия вокруг ягодиц; руки снова соединяются и на вдохе поднимаются вверх до копчика.'
+  ],
+  note: 'Вдох усиливает сексуальную энергию, любое движение на вдохе активизирует желание. Без притока энергии даже технически правильные движения останутся механическими. Упоминание из книги: в Индии женщина должна была владеть 64 видами искусства.'
+},
+{
+  id: 'utro', t: 'Утро с мужчиной', ch: '20', cat: 'body', type: 'правило',
+  goal: 'По книге, утренние ласки мощнейшее оружие: утром можно завладеть мужчиной полностью, и та, кто утолит желание в этот момент, занимает его мысли весь день.',
+  steps: [
+    'Никогда не отказывайся от любви по утрам.',
+    'Если мужчина ещё не проснулся и тянется к тебе, он твой.',
+    'Если нет времени, просто поцелуй его в одно из чувствительных местечек (не в губы).',
+    'Начинай утро не с формального поцелуя в щёку, а с настоящего, не менее 7 секунд.'
+  ]
+},
+{
+  id: 'ulybka', t: 'Улыбка кольцом Венеры', ch: '20', cat: 'release', type: 'движение',
+  goal: 'Быстро снять напряжение и негатив, вернуть лучистый взгляд.',
+  steps: [
+    'Соедини большие пальцы с указательными на обеих руках: кольцо Венеры.',
+    'Поставь пальцы в уголки губ.',
+    'На вдохе растяни улыбку, пальцами подними её до висков.',
+    'На задержке дыхания завяжи улыбку на затылке в маленький бантик.',
+    'На выдохе отпусти. Глаза начинают лучиться, негатив уходит.'
+  ],
+  note: 'В романе героиня использует её в туалете магазина, когда узнаёт, что мужчина собирается уезжать.'
+},
+{
+  id: 'paralleli', t: 'Путешествие в параллельные миры', ch: '22', cat: 'release', type: 'медитация',
+  goal: 'Проверить правильность выбора, когда мучают сомнения. Практику героиня придумала сама, её нет в дневнике.',
+  steps: [
+    'Представь золотой шар и поднимись в нём до 107-го этажа.',
+    'По семнадцати ступенькам поднимись на 108-й этаж, войди в коридор времени и открой дверь в комнату с летающим кораблём.',
+    'Сядь в корабль и лети на пять лет вперёд. Сначала посмотри на жизнь с этим мужчиной, потом на жизнь без него.',
+    'Сравни картины и свои ощущения.'
+  ],
+  note: 'У героини: с Марком — берег моря и сын; без Марка — зал с толпой смеющихся девушек (ученицы) и мужчина с внутренней силой и властью. Оба пути хороши; она выбрала более трудный.'
+},
+{
+  id: 'otrubit', t: 'Отрубить привязанность', ch: '22', cat: 'release', type: 'движение',
+  goal: 'Освободиться от привязанности, когда решение принято. По книге, пока мысли и сердце заняты прежним мужчиной, другие не могут подойти: они чувствуют, что у тебя кто-то есть.',
+  steps: [
+    'Встань. На уровне третьего глаза представь луч, выхватывающий из темноты образ мужчины.',
+    'Правой рукой рубящими движениями сверху вниз и слева направо перерубай луч. Три раза.',
+    'Луч из сердца освещает момент вашей нежности. Перерубай теми же движениями.',
+    'Луч на уровне солнечного сплетения: момент, когда ты заботилась о нём. Перерубай.',
+    'Луч на уровне низа живота: ваша самая страстная сцена. Перерубай.',
+    'Постой, прислушайся: появляется чувство освобождения, хочется взлететь.'
+  ],
+  note: 'Тётушка: если бы мужчина действительно хотел быть с тобой, он не сдался бы без борьбы.'
+},
+{
+  id: 'tanec', t: 'Танец стихий и посвящение обручем', ch: '22', cat: 'elements', type: 'ритуал',
+  goal: 'Финальный ритуал книги: «Рождение женщины в танце стихий». Четыре жрицы отдают камни, и обруч замыкает круг.',
+  steps: [
+    'Вода (зелёное платье): шаловливый, дерзкий танец, радость жизни. Дар: сапфир, эмоциональная власть.',
+    'Земля (жёлтое): степенный, размеренный танец, шаги впечатываются в землю. Дар: изумруд, физическая власть.',
+    'Воздух (голубое): порывистый стремительный танец амазонки; героиня вспоминает техники состояния королевы. Дар: бриллиант, ментальная власть.',
+    'Огонь (красное): у костра руки на низ живота, пламя соединяется с центром страсти; бёдра рисуют восьмёрки и круги, на вдохе к пламени, на выдохе назад. Танец в паре с мужчиной. Дар: рубин, сексуальная власть.',
+    'Камни складываются в шкатулку и подходят к четырём большим отверстиям обруча. Жрицы замыкают круг: левая ладонь вверх (дающая), правая вниз (берущая).',
+    'Аруна произносит текст воронки: магма Земли входит в стопы, поток космоса в ладони, они раскручиваются, и в поток вливаются энергии всех женщин. Надевает обруч.'
+  ],
+  note: 'Слова Аруны: пройден весь круг женской силы, знания нужно передать другим; получив ещё четыре камня, будешь достойна нести по миру мудрость и силу истинной женщины.'
+}
+];
+
+// Содержание книги: идеи, карта, путь, архетипы, уровни, числа, правила, глоссарий, главы
+window.IDEAS = [
+  ['Женщина — сгусток энергии', 'Как Солнце притягивает планеты, так наполненная энергией женщина притягивает мужчин, деньги, возможности, полезные знакомства и может всё это удержать. Всё, что её окружает, создано ею и её энергией.'],
+  ['Мужчина получает энергию через женщину', 'Он не умеет брать энергию из пространства: он направлен на действие. Женщина накапливает её в матке от четырёх стихий: воды, воздуха, огня и земли. Энергия передаётся при близости.'],
+  ['Четыре состояния и четыре стихии', 'Любовница (Огонь), королева (Воздух), девочка (Вода), хозяйка (Земля). Мужчина ищет в одной женщине все четыре. Когда она проживает их все по порядку, она «замыкает круг женской силы».'],
+  ['Связи держатся семь лет', 'Любая близость оставляет энергетическую нить. Пока она не снята, мужчина продолжает черпать энергию, а женщине трудно привлечь нового.'],
+  ['Мужчина не меняется, женщина пластична', 'Мужчину нужно принимать. Женщина способна развить те энергии, которые слабо проявлены от рождения, и этим расширить свой выбор.'],
+  ['Что ждёт мужчина', 'Признание, внимание, веру в него. Эмоциональный возврат на подарки и заботу. Всё это женщина может дать, зная его архетип и сенсорные предпочтения.'],
+  ['Порядок в отношениях важен', 'Любовница привлекает, королева уклоняется и изучает, девочка принимает заботу, хозяйка берёт дом после предложения. Нарушение последовательности: отношения заканчиваются или тянутся впустую.'],
+  ['Любовь — дело женщины', 'Только женщина отвечает за то, в каком мире живёт. Чтобы взгляд истинного ценителя заметил тебя, нужно «из неотшлифованного камня стать бриллиантом»: чем больше граней, тем больше ценность.']
+];
+
+window.ELEMENTS = [
+  { key: 'earth', name: 'Земля', state: 'Хозяйка', color: 'жёлтая богиня, запад', gift: 'розовый кристалл на цепочке: физическая власть', stone: 'изумруд', center: 'третий центр, два пальца выше пупка',
+    gives: 'спокойствие, практичность, основательность, надёжность; умение видеть детали, поддерживать порядок', gets: 'даёт энергию', man: 'Творцам и первооткрывателям' },
+  { key: 'fire', name: 'Огонь', state: 'Любовница', color: 'красная богиня, восток', gift: 'красная свеча: сексуальная власть', stone: 'рубин', center: 'центр страсти, четыре пальца ниже пупка (в обмене качествами два пальца)',
+    gives: 'страстность, непредсказуемость, сексуальность, творчество и воображение', gets: 'даёт энергию, мужчина возвращает подарками и статусом', man: 'Правителям и торговцам' },
+  { key: 'water', name: 'Вода', state: 'Девочка', color: 'зелёная богиня, юг', gift: 'чёрная жемчужина: эмоциональная власть', stone: 'сапфир', center: 'сердечный центр, середина груди',
+    gives: 'эмоциональность, непосредственность, шаловливость, мягкость', gets: 'получает от мужчины', man: 'Правителям и первооткрывателям' },
+  { key: 'air', name: 'Воздух', state: 'Королева (стерва, муза)', color: 'голубая богиня, север', gift: 'перо: ментальная власть', stone: 'бриллиант', center: 'центр лба, третий глаз',
+    gives: 'самостоятельность, упорство, независимость, логика, анализ', gets: 'получает от мужчины', man: 'Торговцам и творцам' }
+];
+
+// Путь отношений: порядок важен, поэтому нумерация оправдана
+window.STAGES = [
+  { n: 'Подготовка', who: 'Энергия', ch: '2–5', text: 'Снять связи с прошлыми мужчинами, накопить энергию, начать тренировку мышц, раскрутить воронки по уровню нужного мужчины, убрать обиды.', prac: ['svyazi', 'pereklyuch', 'lono', 'voronka-nakop', 'cvetok', 'cvetok-otkr', 'dyhanie', 'myshtsy', 'pole', 'voronka-prit', 'voronka-uderzh', 'vihr', 'voronka-serdca', 'test-kraski', 'petuhi', 'obida-sebe'] },
+  { n: 'Привлечение', who: 'Любовница', ch: '7–8', text: 'Настроиться на огонь, подобрать образ и пройти пять шагов знакомства: взгляд, улыбка и кивок, слово, касание, быстрое исчезновение.', prac: ['svecha', 'obraz', 'znakomstvo', 'slovo', 'golos', 'ladoni', 'kasaniya', 'nevod'] },
+  { n: 'Первые свидания', who: 'Королева', ch: '8–9', text: '6–10 свиданий уклоняться от близости, встречаться на нейтральной территории, создавать иллюзию поклонников и собирать информацию о мужчине (3–6 встреч).', prac: ['uklonenie', 'poklonniki', 'razvedka', 'koronaciya', 'korona', 'pod-kabluk', 'verhom'] },
+  { n: 'Первая близость', who: 'Девочка', ch: '10', text: 'Переход из королевы в девочку. Выглядеть неопытной, позволить учить. После ночи исчезнуть на 3–10 дней.', prac: ['pervaya-noch'] },
+  { n: 'Время сомнений', who: 'Девочка', ch: '11', text: 'Мужчина решает, то ли это. Женщина не звонит и не плачет, сохраняет блеск в глазах, возвращает себе лёгкость девочки.', prac: ['ogon-krug', 'magazin'] },
+  { n: 'Забота, вера, внимание', who: 'Девочка', ch: '12–15', text: 'Принимать заботу и подарки, давать мужчине спасать, верить в него, давать внимание к деталям.', prac: ['zabota', 'spasitel', 'pole-deyat', 'vera', 'assa', 'varenye', 'syurpriz'] },
+  { n: 'Принятие', who: 'Все четыре', ch: '16', text: 'Принять мужчину таким, какой он есть, определить его архетип и то, каких состояний он ждёт.', prac: ['prinyat'] },
+  { n: 'Подарки и признание', who: 'Любовница, девочка', ch: '17', text: 'Просить конкретно, расширять зону комфорта мужчины, давать эмоциональный возврат.', prac: ['podarki', 'rog', 'otvet'] },
+  { n: 'Предложение', who: 'Королева, девочка', ch: '18–19', text: 'Если через год нет предложения, перейти к решительным действиям. Мужчине нужно время, чтобы влюбиться: не меньше трёх месяцев.', prac: ['fr-noch', 'provokaciya'] },
+  { n: 'Роль хозяйки', who: 'Хозяйка', ch: '20', text: 'После предложения дать мужчине то, что он ждёт по пяти органам чувств.', prac: ['sensornye', 'massazh', 'utro', 'ulybka'] },
+  { n: 'Решение', who: 'Все четыре', ch: '21–22', text: 'Спросить себя, твой ли это мужчина. Принять решение и освободиться от привязанности. Пройти посвящение.', prac: ['paralleli', 'otrubit', 'tanec', 'stihii', 'obmen'] }
+];
+
+window.ARCHETYPES = [
+  { name: 'Правители', els: 'Воздух + Земля', core: 'Логика и практичность. Прирождённые вожаки, сильная воля, целеустремлённость. Миром, по их мнению, правит сила.',
+    traits: 'Редко терпят поражения, не прощают обид. Требуют порядка. Сдержанны в эмоциях, скрытны, ревнивы, склонны следить за женщиной. Больше внимания статусу вещей, чем внешности.',
+    wants: 'Любовница + девочка', image: 'порхающая разноцветная бабочка (гейша, девадаси, гетера)',
+    wantsText: 'Артистичная, пластичная, изобретательная женщина, которая наполняет красками их регламентированную жизнь, искренне восхищается и вдохновляет. Образ романтичной девочки подходит больше всего.' },
+  { name: 'Торговцы', els: 'Земля + Вода', core: 'Практичность и чувствительность. Улавливают настроение и подыгрывают, умеют торговаться и отстаивать интересы.',
+    traits: 'Свободны в действиях и мышлении, малопредсказуемы, склонны к риску, оптимисты, решительны. Стремятся к власти и славе, любят праздник и разнообразие, красиво ухаживают, следят за внешностью. То щедры, то скупы.',
+    wants: 'Королева (стерва) + любовница', image: 'внешне холодная, умная, дьявольски раскрепощённая в постели',
+    wantsText: 'Независимость, ум, страстность. Любит выбирать подарок сама, но позволяет выбрать ему. Ухоженная, меняет туалеты, танцует, не позволяя прикоснуться. Он ревнует скорее к подругам, чем к мужчинам.' },
+  { name: 'Творцы', els: 'Вода + Огонь', core: 'Чувственность, богатая фантазия, умение очаровываться новыми возможностями. Художники, поэты, архитекторы, актёры, музыканты.',
+    traits: 'Мечтательны, романтичны, способны на красивые жесты. Равнодушны к быту, им нужна чья-то забота. Живут в творческом беспорядке, воспевают женщину, но им трудно её обеспечить. Изобретательны в постели.',
+    wants: 'Хозяйка + королева (муза)', image: 'ухоженная, элегантная, основательная',
+    wantsText: 'Создаёт уют, ведёт хозяйство, спокойна и сдержанна, лидер в семье. Проблема: такие женщины ищут сильных и успешных и не видят, что именно их усилия делают художников знаменитыми.' },
+  { name: 'Первооткрыватели', els: 'Огонь + Воздух', core: 'Логика и интуиция. Учёные и исследователи, готовы броситься в неизведанное, легко разрушают старое ради нового.',
+    traits: 'Не замечают порядок, здоровье, еду. Равнодушны к деньгам: легко зарабатывают и легко тратят. Плохо разбираются в чувствах и никого не подпускают. Убедительно аргументируют, могут ранить. Кажутся холодными, но по натуре страстные.',
+    wants: 'Хозяйка + девочка', image: 'практичная одежда без рюшечек, дом блестит и открыт для гостей',
+    wantsText: 'Улавливает настроение и подстраивается, поддерживает. В её глазах он видит восхищение и веру. Оставляет ему последнее слово и даёт чувствовать себя главным, мягко управляя.' }
+];
+
+window.LEVELS = [
+  ['1', 'Пропитание: денег хватает только на еду', 'Физическая власть: привлечение'],
+  ['2', 'Свой дом и семья; наёмный работник', 'Сексуальная власть: удержание'],
+  ['3', 'Собственное дело, на него работают другие', 'Социальная власть («вихрь»): заработок'],
+  ['4', '«Плазма Солнца»: известность, деньги рекой', 'Эмоциональная власть: слава'],
+  ['5', 'Сановник, министр, дело на миллионы, международные компании', 'Пространственно-временная власть: личный самолёт, миллиарды, премьер, губернатор, корпорация'],
+  ['6', 'Ментальная власть: короли, императоры, философы, писатели, художники', 'Ментальная власть: определяет, что и как думает человечество (Роулинг, Шанель, Екатерина Великая)'],
+  ['7', 'Дух важнее мирского', 'Духовная власть: связь высших сил и людей (Блаватская, Рерих, мать Тереза)']
+];
+
+window.NUMBERS = [
+  ['7 лет', 'сколько держится связь с мужчиной', '2'],
+  ['19-й лунный день', 'лучшее время снимать связи', '2'],
+  ['3 круга', 'сбор нити при освобождении от связи', '2'],
+  ['20 циклов', 'дыхание накопления энергии', '3'],
+  ['10 минут', 'не дольше при тренировке мышц; серии по 10 медленно и 10 быстро, до 300 в день', '4'],
+  ['3 · 7 · 17 · 34 · 72 · 108', 'повороты воронки по уровню мужчины (для вихря: 73, 117)', '5'],
+  ['28 дней', 'нужно клеткам на перестройку на новый уровень', '5'],
+  ['25% / 75%', 'идеальное соотношение мужской и женской энергии', '5'],
+  ['8 выдохов, 3 «кукареку»', 'в практике «Петухи»', '5'],
+  ['10–15 сжатий', 'мышцы, чтобы «разжечь огонь»; 20–25 — чтобы расширились зрачки', '7'],
+  ['7 секунд', 'взгляд при знакомстве', '7'],
+  ['10–15 минут', 'первая встреча не дольше', '7'],
+  ['6–10 свиданий', 'уклоняться от близости', '8'],
+  ['3–6 встреч', 'собирать информацию о мужчине', '9'],
+  ['8 · 16 · 30 · 34 вершка', 'зоны грязи, боли, неудачи и удачи (высота холки коня)', '9'],
+  ['3 по 3 раза', 'рубящие движения с колен при обиде на себя', '9'],
+  ['3–10 дней', 'мужчина не видит и не слышит женщину после первой ночи', '10'],
+  ['10 процентов', 'правило: деньги, вложенные в любимую женщину, возвращаются мужчине в десятикратном размере', '6'],
+  ['5 дней', 'через сколько подарить варенье, чтобы эффект был сильнее', '15'],
+  ['7 ч · 14 ч · 72 ч · 1 год 3 мес · 3 года 7 мес · 12 лет', 'минимальное время принятия решения мужчиной', '17'],
+  ['3 дня', 'вернуться к разговору о подарке', '17'],
+  ['3 месяца', 'минимум без секса, чтобы в мужчине проснулись чувства', '18'],
+  ['1 год', 'срок, после которого без предложения переходить к решительным действиям; в романе ультиматум на 2 недели', '18'],
+  ['7 секунд', 'утренний поцелуй не короче', '20'],
+  ['20 секунд', 'сколько мужчина способен внимательно слушать женщину', '20'],
+  ['30 минут', 'максимум, на сколько хватает мужчины в магазинах', '20'],
+  ['4 + 4 + 1', 'камней в обруче: четыре больших, четыре малых, девятый наверху', '3'],
+  ['4 · 4 · 7', 'стихии, состояния, уровни власти', '5–6']
+];
+
+window.RULES = {
+  do: [
+    ['Закрывай пространство и благодари после практик', '5'],
+    ['Свёрнутая воронка: развернула — сверни', '3'],
+    ['Говори о желаниях конкретно, сидя слева', '17'],
+    ['Слушай его, не отвлекаясь; о себе говори коротко', '9, 20'],
+    ['Благодари громко, восторженно, не жалей слов', '12, 17'],
+    ['Верь в мужчину и его проекты', '14'],
+    ['Узнавай, что он любит: еда, музыка, мечты, первая любовь', '9, 20'],
+    ['Будь пассивной в состоянии девочки', '11'],
+    ['Исчезай после первой ночи на 3–10 дней', '10'],
+    ['Позволяй ему платить и выбирать', '12, 20'],
+    ['Показывай, что у тебя много поклонников, а он выбранный', '8, 14'],
+    ['Принимай его таким, какой он есть', '16']
+  ],
+  dont: [
+    ['Не звони и не пиши первой', '10, 11'],
+    ['Не плачь: теряешь энергию', '11'],
+    ['Не обижайся: обиды старят и ведут к болезням', '14'],
+    ['Не критикуй и не напоминай о неудачах', '14'],
+    ['Не рассказывай про прошлые романы', '9'],
+    ['Не спеши в постель: мужчине нужно время влюбиться; став любовницей, почти невозможно стать женой', '6, 8, 18'],
+    ['Не покупай ему вещи на свои деньги до замужества', '20'],
+    ['Не становись «мамочкой»: с мамой не спят', '6, 20'],
+    ['Не говори «куплю сама», когда хочешь подарок', '17'],
+    ['Не устраивай скандал при измене, а ищи причину в себе', '14'],
+    ['Не говори абстрактно: «порадуй меня»', '17'],
+    ['Не показывай, какой запах его привлекает', '20'],
+    ['Не корми нелюбимым, даже полезным', '20']
+  ]
+};
+
+window.GLOSSARY = [
+  ['Круг женской силы', 'Четыре женщины-жрицы, соединяющие четыре энергии, или состояние женщины, в котором проживаются все четыре: любовница, королева, девочка, хозяйка. В романе: подруги, которые дружат вчетвером.'],
+  ['Обруч женской силы', 'Выкован Гефестом для Афродиты. Четыре больших камня (стихии), четыре малых (типы мужчин), девятый наверху (жемчужина, символ женской энергии).'],
+  ['Альковный дневник', 'Дневник прабабушки Варвары Ренар с рецептами соблазнения и древними знаниями. Источник практик в романе.'],
+  ['Академия частной жизни', 'Школа женских практик в Москве, где героиня 2003 года учится у мастеров Аруны, Женечки, Антонины, Тимура.'],
+  ['Кольцо женской силы', 'Большой палец (женская сексуальность) соединён с указательным (власть).'],
+  ['Лоно женской природы', 'Внутреннее пространство, в которое входят медитацией: первое — матка, второе — полость рта (нёбо как купол тронного зала).'],
+  ['Воронка', 'Изначальная структура женской энергии; раскручивается вверх или вниз. «Если разворачиваешь, обязательно сверни».'],
+  ['Центр страсти', 'Четыре пальца ниже пупка (верх лобковой кости). Третий центр: два пальца выше пупка. Центр лба: интуиция, третий глаз.'],
+  ['Закрыть пространство', 'Мысленно свернуть воронку или представить пустоту, поблагодарив. «Этика пространства».'],
+  ['Зона комфорта', 'То, что мужчина имеет сейчас: машина, жильё, доход. Желания женщины расширяют её; если не расширять, она сужается.'],
+  ['Время сомнений', 'Период после первой ночи, когда мужчина решает, то ли это. Женщина не звонит, не пишет, не плачет.'],
+  ['Огненный круг любви', 'Состояние, когда женщина поглощена мужчиной и не может думать ни о чём другом.'],
+  ['Эмоциональный возврат', 'Ожидаемая мужчиной реакция на подарок и заботу: радость и признание.'],
+  ['Сенсорные доминанты', 'Пять каналов восприятия мужчины: зрение, осязание, обоняние, вкус, слух; формируются в детстве.'],
+  ['Точка прапамяти', 'Точка под носом, на которую давят указательными пальцами в практике «Петухи».'],
+  ['Вершок', 'Старая мера длины (около 4,4 см). В практике «Верховая езда» через вершки задаются зоны защиты.']
+];
+
+window.PARTS = [
+  { n: 1, name: 'Новая жизнь и искусство наслаждения', from: 1, to: 4 },
+  { n: 2, name: 'Уровни женской власти и уровни отношений', from: 5, to: 11 },
+  { n: 3, name: 'Признание ожиданий', from: 12, to: 16 },
+  { n: 4, name: 'На пике мечты', from: 17, to: 19 },
+  { n: 5, name: 'Такое разное счастливое окончание', from: 20, to: 22 }
+];
+
+window.CHAPTERS = [
+  { n: 1, t: 'Перспективное знакомство', s: 'Героиня 2003 года находит на чердаке прабабушкин альковный дневник и старинный обруч. Параллельно 1903 год: Варвара Ренар на пароходе в Афины знакомится с Марком Гольбером. В храме Афродиты на Акрополе Варвара получает видение об обруче и девяти камнях и находит обруч в земле.', prac: [] },
+  { n: 2, t: 'Чего-то мне недостаёт', s: 'Тётушка Софья Николаевна объясняет, почему одни женщины привлекают, а другие нет: энергия. Объясняются связи с прошлыми мужчинами и их снятие, переключение связи пальцами.', prac: ['svyazi', 'pereklyuch'] },
+  { n: 3, t: 'Свобода и энергия', s: 'История обруча и девяти камней. Медитации: лоно женской природы, воронка, внутренний цветок. Дыхание накопления энергии.', prac: ['lono', 'voronka-nakop', 'cvetok', 'cvetok-otkr', 'dyhanie'] },
+  { n: 4, t: 'Поле сексуальности', s: 'Тренировка интимных мышц и «поле притягательности». Первые результаты: реакция мужчин меняется.', prac: ['myshtsy', 'pole'] },
+  { n: 5, t: 'От интереса к страсти', s: 'Семь уровней мужской и женской власти. Воронки на привлечение, удержание, вихрь, воронка сердца. Тест красной и белой краской, «Петухи».', prac: ['voronka-prit', 'voronka-uderzh', 'vihr', 'voronka-serdca', 'test-kraski', 'petuhi'] },
+  { n: 6, t: 'Каких вы хотите отношений? (стратегия выхода замуж)', s: 'Четыре состояния женщины и их порядок в отношениях, четыре стихии, посвящение жриц на Ладоге, обмен качествами в кругу подруг, обмен энергией с мужчиной.', prac: ['stihii', 'obmen'] },
+  { n: 7, t: 'По ступеням отношений', s: 'Пять шагов знакомства: взгляд, улыбка, кивок, слово, касание. Голос из матки, огненные ладони, приёмы касаний.', prac: ['znakomstvo', 'slovo', 'golos', 'ladoni', 'kasaniya'] },
+  { n: 8, t: 'Любая роль требует репетиций', s: 'Красный цвет, каблуки, серьги. Мужчина под каблуком, ритуал со свечой. Первая встреча-бал. Не отдаваться сразу: уклонение, иллюзия поклонников.', prac: ['obraz', 'pod-kabluk', 'svecha', 'uklonenie', 'poklonniki'] },
+  { n: 9, t: 'Начинаем расследование', s: 'Сбор информации о мужчине (3–6 встреч). Убрать обиду на себя, верховая езда, коронация, корона жестом. Состояние королевы.', prac: ['razvedka', 'obida-sebe', 'verhom', 'koronaciya', 'korona'] },
+  { n: 10, t: 'Ночь любви. Подготовка', s: 'Переход из королевы в девочку. Невод привлекательности. Белое бельё, образ неопытной. Правило Золушки: исчезнуть после первой ночи.', prac: ['nevod', 'pervaya-noch'] },
+  { n: 11, t: 'Время сомнений. Психологический ход', s: 'Что делать, пока мужчина молчит: выход из огненного круга любви, совет подруг, состояние девочки, волшебный магазинчик.', prac: ['ogon-krug', 'magazin'] },
+  { n: 12, t: 'Энергия его подарков', s: 'Состояние девочки: принимать подарки и заботу, радоваться искренне. Медитация на включение заботы.', prac: ['zabota', 'spasitel'] },
+  { n: 13, t: 'И пусть он будет спасителем', s: 'Проверка: готов ли мужчина примчаться на помощь. Поле деятельности: вдохновлять и закрывать пространство.', prac: ['spasitel', 'pole-deyat'] },
+  { n: 14, t: 'Вера в мужчину — ключ к его сердцу', s: 'Вера в мужчину, конкуренция, измена. Освобождение от боли и обиды.', prac: ['vera', 'assa'] },
+  { n: 15, t: 'Признание и внимание — вот чего он хочет', s: 'Внимание как действие. Варенье с энергией. День рождения Матвея: сюрприз по его желаниям.', prac: ['varenye', 'syurpriz'] },
+  { n: 16, t: 'Принимаешь или нет?', s: 'Принимать, а не понимать. Четыре категории мужчин (правители, торговцы, творцы, первооткрыватели) и что каждая ищет в женщине.', prac: ['prinyat'] },
+  { n: 17, t: 'Готова ли ты меняться?', s: 'Подарки: правила, зона комфорта, время решения мужчины, рог изобилия, эмоциональный возврат.', prac: ['podarki', 'rog', 'otvet'] },
+  { n: 18, t: 'Сюрпризы и ещё раз сюрпризы', s: 'Французская ночь. Когда нет предложения: гражданский брак и штамп, провокация «уезжаю навсегда», время влюбиться.', prac: ['fr-noch', 'provokaciya'] },
+  { n: 19, t: 'Решающий шаг, или Последний шанс', s: 'Шамони, особняк, новая жизнь. Шарль и Крис: правила второго свидания в действии. Находка: портрет прабабушки.', prac: [] },
+  { n: 20, t: 'Как это бывает: наука и действие', s: 'Роль хозяйки: пять сенсорных доминант. Туземный массаж, утренние ласки, совместные покупки, улыбка кольцом Венеры.', prac: ['sensornye', 'massazh', 'utro', 'ulybka'] },
+  { n: 21, t: 'Ваш ли это мужчина? Важно знать свои желания', s: 'Предложения от Матвея и Марка. Героиня отвечает «Слишком поздно» и объясняет себе, что изменилась.', prac: [] },
+  { n: 22, t: 'Начало новой жизни, следующей, но не последней', s: 'Параллельные миры, отрубить привязанность, финальный хеппенинг «Рождение женщины в танце стихий», надевание обруча.', prac: ['paralleli', 'otrubit', 'tanec'] }
+];
+
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var norm = function (s) { return String(s).toLowerCase().replace(/ё/g, 'е'); };
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var byId = {};
+  PRACTICES.forEach(function (p) { byId[p.id] = p; });
+
+  /* nav */
+  var sections = [['idea', 'Суть'], ['stihii', 'Стихии'], ['put', 'Путь'], ['praktiki', 'Практики'], ['muzhchiny', 'Мужчины'], ['chisla', 'Числа'], ['pravila', 'Правила'], ['glavy', 'Главы'], ['slovar', 'Словарь']];
+  $('#nav').innerHTML = sections.map(function (s) { return '<a href="#' + s[0] + '" data-s="' + s[0] + '">' + s[1] + '</a>'; }).join('');
+
+  /* hero stats */
+  $('#stats').innerHTML = [[CHAPTERS.length, 'глав'], [PARTS.length, 'частей'], [PRACTICES.length, 'практик и приёмов'], [4, 'стихии'], [7, 'уровней власти']]
+    .map(function (s) { return '<div class="stat"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>'; }).join('');
+
+  /* идеи */
+  $('#ideas').innerHTML = IDEAS.map(function (i) { return '<div class="idea"><h3>' + esc(i[0]) + '</h3><p>' + esc(i[1]) + '</p></div>'; }).join('');
+
+  /* стихии */
+  $('#els').innerHTML = ELEMENTS.map(function (e) {
+    return '<article class="el" data-k="' + e.key + '"><div class="el-top"><p class="eyebrow">Стихия</p><h3>' + esc(e.name) + '</h3><p class="st">Состояние: ' + esc(e.state) + '</p></div><dl>' +
+      '<dt>Богиня и сторона</dt><dd>' + esc(e.color) + '</dd>' +
+      '<dt>Что даёт</dt><dd>' + esc(e.gives) + '</dd>' +
+      '<dt>Дар жрицы</dt><dd>' + esc(e.gift) + '</dd>' +
+      '<dt>Камень в финале</dt><dd>' + esc(e.stone) + '</dd>' +
+      '<dt>Центр на теле</dt><dd>' + esc(e.center) + '</dd>' +
+      '<dt>Обмен с мужчиной</dt><dd>' + esc(e.gets) + '</dd>' +
+      '<dt>Ищут такую</dt><dd>' + esc(e.man) + '</dd></dl></article>';
+  }).join('');
+  $('#levels').innerHTML = LEVELS.map(function (l) { return '<tr><td class="n">' + l[0] + '</td><td>' + esc(l[1]) + '</td><td>' + esc(l[2]) + '</td></tr>'; }).join('');
+
+  /* путь */
+  var chip = function (id) { return byId[id] ? '<a class="chip" href="#p-' + id + '" data-p="' + id + '">' + esc(byId[id].t) + '</a>' : ''; };
+  $('#path').innerHTML = STAGES.map(function (s, i) {
+    return '<li class="stage"><div class="stage-n">' + (i + 1) + '</div><div><h3>' + esc(s.n) + '</h3><p class="meta">Состояние: ' + esc(s.who) + ' · главы ' + esc(s.ch) + '</p><p>' + esc(s.text) + '</p><div class="chips">' + s.prac.map(chip).join('') + '</div></div></li>';
+  }).join('');
+
+  /* практики */
+  var state = { q: '', cat: 'all' };
+  var hay = {};
+  PRACTICES.forEach(function (p) {
+    hay[p.id] = norm([p.t, p.goal, p.type, p.note || '', p.steps.join(' '), (p.table || []).map(function (r) { return r.join(' '); }).join(' ')].join(' '));
+  });
+  var catKeys = Object.keys(CATS);
+  function renderFilters() {
+    var counts = { all: PRACTICES.length };
+    PRACTICES.forEach(function (p) { counts[p.cat] = (counts[p.cat] || 0) + 1; });
+    $('#filters').innerHTML = ['all'].concat(catKeys).map(function (k) {
+      var name = k === 'all' ? 'Все' : CATS[k].name;
+      return '<button type="button" data-c="' + k + '" aria-pressed="' + (state.cat === k) + '">' + esc(name) + '<small>' + counts[k] + '</small></button>';
+    }).join('');
+  }
+  function card(p) {
+    var tbl = p.table ? '<div class="tbl"><table><tbody>' + p.table.map(function (r) { return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td></tr>'; }).join('') + '</tbody></table></div>' : '';
+    return '<details class="prac" id="p-' + p.id + '"><summary><h3>' + esc(p.t) + '</h3><span class="chb num">гл. ' + esc(p.ch) + '</span>' +
+      '<span class="pm">' + esc(CATS[p.cat].name) + ' · ' + esc(p.type) + '</span><span class="pg">' + esc(p.goal) + '</span><span class="tg"></span></summary>' +
+      '<div class="pb"><ol>' + p.steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>' + tbl +
+      (p.note ? '<div class="note"><b>Из книги</b>' + esc(p.note) + '</div>' : '') + '</div></details>';
+  }
+  function renderList() {
+    var words = norm(state.q.trim()).split(/\s+/).filter(Boolean).map(function (w) { return w.length >= 6 ? w.slice(0, -2) : w.length >= 4 ? w.slice(0, -1) : w; });
+    var items = PRACTICES.filter(function (p) {
+      return (state.cat === 'all' || p.cat === state.cat) && words.every(function (w) { return hay[p.id].indexOf(w) !== -1; });
+    });
+    $('#list').innerHTML = items.length ? items.map(card).join('') : '<p class="empty">Ничего не найдено. Попробуй другое слово или сбрось категорию.</p>';
+    $('#count').textContent = 'Показано ' + items.length + ' из ' + PRACTICES.length;
+    $('#toggle').textContent = 'Раскрыть все';
+  }
+  renderFilters(); renderList();
+  $('#q').addEventListener('input', function (e) { state.q = e.target.value; renderList(); });
+  $('#filters').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    state.cat = b.getAttribute('data-c'); renderFilters(); renderList();
+  });
+  $('#toggle').addEventListener('click', function () {
+    var open = $('#toggle').textContent === 'Раскрыть все';
+    document.querySelectorAll('#list details').forEach(function (d) { d.open = open; });
+    $('#toggle').textContent = open ? 'Свернуть все' : 'Раскрыть все';
+  });
+
+  function openPractice(id) {
+    if (!byId[id]) return;
+    if (!document.getElementById('p-' + id)) { state.q = ''; state.cat = 'all'; $('#q').value = ''; renderFilters(); renderList(); }
+    var el = document.getElementById('p-' + id);
+    if (!el) return;
+    el.open = true;
+    var y = el.getBoundingClientRect().top + window.pageYOffset - 130;
+    window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+    try { history.replaceState(null, '', '#p-' + id); } catch (e) { /* ignore */ }
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-p]'); if (!a) return;
+    e.preventDefault(); openPractice(a.getAttribute('data-p'));
+  });
+  if (location.hash.indexOf('#p-') === 0) openPractice(location.hash.slice(3));
+
+  /* мужчины */
+  $('#arch').innerHTML = ARCHETYPES.map(function (a) {
+    return '<article class="ar"><div><h3>' + esc(a.name) + '</h3><p class="els-l">' + esc(a.els) + '</p></div>' +
+      '<div><h4>Суть</h4><p>' + esc(a.core) + '</p></div><div><h4>Черты</h4><p>' + esc(a.traits) + '</p></div>' +
+      '<div class="want"><h4>Ищет в женщине</h4><b>' + esc(a.wants) + '</b><p>' + esc(a.image.charAt(0).toUpperCase() + a.image.slice(1)) + '. ' + esc(a.wantsText) + '</p></div></article>';
+  }).join('');
+
+  /* числа */
+  $('#nums').innerHTML = NUMBERS.map(function (n) { return '<div class="nm"><b>' + esc(n[0]) + '</b><span>' + esc(n[1]) + '</span><i>гл. ' + esc(n[2]) + '</i></div>'; }).join('');
+
+  /* правила */
+  var rl = function (t, arr) { return '<div class="rl"><h3>' + t + '</h3><ul>' + arr.map(function (r) { return '<li><span>' + esc(r[0]) + '</span><i>гл. ' + esc(r[1]) + '</i></li>'; }).join('') + '</ul></div>'; };
+  $('#rules').innerHTML = rl('Делай', RULES.do) + rl('Не делай', RULES.dont);
+
+  /* главы */
+  $('#chapters').innerHTML = PARTS.map(function (pt) {
+    var rows = CHAPTERS.filter(function (c) { return c.n >= pt.from && c.n <= pt.to; }).map(function (c) {
+      return '<details class="chap"><summary><span class="cn">' + c.n + '</span><span class="ct">' + esc(c.t) + '</span><span class="cm">' + (c.prac.length ? c.prac.length + ' практ.' : 'сюжет') + '</span></summary><div class="cb"><p>' + esc(c.s) + '</p>' +
+        (c.prac.length ? '<div class="chips">' + c.prac.map(chip).join('') + '</div>' : '') + '</div></details>';
+    }).join('');
+    return '<div class="part"><span class="eyebrow">Часть ' + pt.n + '</span><h3>' + esc(pt.name) + '</h3>' + rows + '</div>';
+  }).join('');
+
+  /* словарь */
+  $('#gl').innerHTML = GLOSSARY.map(function (g) { return '<div><dt>' + esc(g[0]) + '</dt><dd>' + esc(g[1]) + '</dd></div>'; }).join('');
+
+  /* подсветка раздела в навигации */
+  if ('IntersectionObserver' in window) {
+    var links = {};
+    document.querySelectorAll('#nav a').forEach(function (a) { links[a.getAttribute('data-s')] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (en.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('on'); });
+          var l = links[en.target.id]; if (l) { l.classList.add('on'); }
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { var el = document.getElementById(s[0]); if (el) io.observe(el); });
+  }
+})();
+
+</script>
+</body>
+</html>
